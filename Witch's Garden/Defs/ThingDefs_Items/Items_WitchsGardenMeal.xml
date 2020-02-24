@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+<ThingDef ParentName="MealRottable">
+    <defName>MealHerb</defName>
+    <label>fine meal with herbs</label>
+    <description>A complex dish assembled with care from a variety of ingredients with herbs.</description>
+    <graphicData>
+      <texPath>Things/Item/HerbMeal</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>25</MarketValue>
+      <WorkToMake>500</WorkToMake>
+      <Nutrition>0.95</Nutrition>
+    </statBases>
+    <ingestible>
+      <preferability>MealLavish</preferability>
+			<tasteThought>AteHerbMeal</tasteThought>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+    </ingestible>
+  </ThingDef>
+
+  <ThoughtDef>
+    <defName>AteHerbMeal</defName>
+    <durationDays>1</durationDays>
+    <stages>
+      <li>
+        <label>ate fine meal with herbs</label>
+        <description>I ate a really tasty fine meal with herbs. Yum!</description>
+        <baseMoodEffect>7</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+  <RecipeDef ParentName="CookMealBase">
+		<defName>CookMealHerb</defName>
+		<label>cook fine meal with herbs</label>
+		<description>Cook a somewhat complex meal from a combination of meat and plant ingredients with herbs.</description>
+		<jobString>Cooking fine meal.</jobString>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    <ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>MeatRaw</li>
+            <li>AnimalProductRaw</li>
+          </categories>
+				</filter>
+				<count>0.25</count>
+			</li>
+			<li>
+				<filter>
+					<categories>
+						<li>PlantFoodRaw</li>
+					</categories>
+				</filter>
+				<count>0.25</count>
+			</li>
+			<li>
+				<filter>
+					<categories>
+						<li>HerbFoodRawCat</li>
+					</categories>
+				</filter>
+				<count>0.1</count>
+			</li>
+		</ingredients>
+		<products>
+      <MealHerb>1</MealHerb>
+    </products>
+	<researchPrerequisite>WGHerbsRes</researchPrerequisite>
+		<skillRequirements>
+			<Cooking>7</Cooking>
+		</skillRequirements>
+		<recipeUsers>
+        <li>ElectricStove</li>
+		<li>FueledStove</li>
+    </recipeUsers>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="CookMealBase">
+		<defName>CookMealHerb2</defName>
+		<label>combine fine meal with herbs</label>
+		<description>Cook a somewhat complex meal from a combination of fine meals with herbs.</description>
+		<jobString>Cooking fine meal.</jobString>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    <ingredients>
+			<li>
+        		<filter>
+          			<thingDefs>
+            			<li>MealFine</li>
+          			</thingDefs>
+        		</filter>
+        		<count>1</count>
+      		</li>
+			<li>
+				<filter>
+					<categories>
+						<li>HerbFoodRawCat</li>
+					</categories>
+				</filter>
+				<count>0.1</count>
+			</li>
+		</ingredients>
+		<products>
+      <MealHerb>1</MealHerb>
+    </products>
+	<researchPrerequisite>WGHerbsRes</researchPrerequisite>
+		<skillRequirements>
+			<Cooking>7</Cooking>
+		</skillRequirements>
+		<recipeUsers>
+        <li>ElectricStove</li>
+		<li>FueledStove</li>
+    </recipeUsers>
+  </RecipeDef>
+
+</Defs>

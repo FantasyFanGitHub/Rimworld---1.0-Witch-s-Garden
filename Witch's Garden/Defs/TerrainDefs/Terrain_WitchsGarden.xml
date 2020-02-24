@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+<TerrainDef  ParentName="FloorBase">
+		<defName>WGMulchFloor</defName>
+		<label>mulch</label>
+		<renderPrecedence>340</renderPrecedence>
+		<pathCost>4</pathCost>
+		<description>Some bark to improve fertility (120%).</description>
+		<texturePath>Things/Floor/WGMulch</texturePath>
+		<edgeType>Hard</edgeType>
+		<burnedDef>BurnedWoodPlankFloor</burnedDef>
+		<color>(108,78,55)</color>
+		<statBases>
+			<Beauty>-1</Beauty>
+			<WorkToBuild>180</WorkToBuild>
+			<Flammability>0.22</Flammability>
+			<Cleanliness>-1</Cleanliness>
+        </statBases>
+		<fertility>1.2</fertility>
+		<costList>
+			<WGBark>30</WGBark>
+		</costList>
+		<constructEffect>ConstructWood</constructEffect>
+		<designationHotKey>Misc7</designationHotKey>
+		<researchPrerequisites>
+      		<li>WGFloorRes</li>
+    	</researchPrerequisites>
+	</TerrainDef>
+	
+	<TerrainDef ParentName="FloorBase">
+		<defName>WGCompostFloor</defName>
+		<label>compost</label>
+		<description>Some compost to improve fertility (135%).</description>
+		<texturePath>Things/Floor/SoilCompost</texturePath>
+		<renderPrecedence>340</renderPrecedence>
+		<pathCost>2</pathCost>
+		<statBases>
+			<Beauty>-1</Beauty>
+			<WorkToBuild>180</WorkToBuild>
+			<Cleanliness>-1</Cleanliness>
+		</statBases>
+		<fertility>1.35</fertility>
+		<costList>
+			<WGCompost>2</WGCompost>
+		</costList>
+		<constructEffect>ConstructWood</constructEffect>
+		<designationHotKey>Misc6</designationHotKey>
+    	<researchPrerequisites>
+      		<li>WGFloorRes</li>
+    	</researchPrerequisites>
+	</TerrainDef>
+
+
+
+</Defs>

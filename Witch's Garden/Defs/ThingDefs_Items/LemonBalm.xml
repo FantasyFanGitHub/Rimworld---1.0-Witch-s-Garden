@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="DrugBase">
+    <defName>RawLemonBalm</defName>
+    <label>LemonBalm</label>
+	<description>Lemon balm is a plant in the mint family and native to south-central Europe, the Mediterranean Basin, Iran, and Central Asia, but now naturalized in the Americas and elsewhere. Decreses the rest need and increses the metabolism of a pawn.</description>
+    <graphicData>
+      <texPath>Things/Item/LemonBalm</texPath>
+	  <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <tradeability>Sellable</tradeability>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <tickerType>Rare</tickerType>
+    <statBases>
+      <MarketValue>1.1</MarketValue>
+      <Mass>0.03</Mass>
+	  <DeteriorationRate>6</DeteriorationRate>
+      <Nutrition>0.05</Nutrition>
+    </statBases>
+    <techLevel>Neolithic</techLevel>
+    <ingestible>
+			<baseIngestTicks>100</baseIngestTicks>
+			<chairSearchRadius>4</chairSearchRadius>
+      <preferability>DesperateOnly</preferability>
+      <tasteThought></tasteThought>
+      <foodType>VegetableOrFruit</foodType>
+      <joyKind>Chemical</joyKind>
+      <joy>0.5</joy>
+      <nurseable>true</nurseable>
+      <drugCategory>Social</drugCategory>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>LemonBalmHigh</hediffDef>
+          <severity>0.50</severity>
+          <toleranceChemical>LemonBalm</toleranceChemical>
+        </li>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>LemonBalmTolerance</hediffDef>
+          <severity>0.032</severity>
+          <divideByBodySize>true</divideByBodySize>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>30</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+			<li Class="CompProperties_Drug">
+				<chemical>LemonBalm</chemical>
+				<addictiveness>0.003</addictiveness>
+				<minToleranceToAddict>0.35</minToleranceToAddict>
+				<existingAddictionSeverityOffset>0.1</existingAddictionSeverityOffset>
+				<needLevelOffset>1</needLevelOffset>
+				<listOrder>30</listOrder>
+			</li>
+		</comps>
+  </ThingDef>
+
+  <HediffDef>
+    <defName>LemonBalmHigh</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>LemonBalm warmth</label>
+    <defaultLabelColor>(0,1,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.75</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+	  	<restFallFactor>0.7</restFallFactor>
+		<capMods>
+            <li>
+              <capacity>Metabolism</capacity>
+              <offset>0.20</offset>
+            </li>
+          </capMods>
+	  </li>
+    </stages>
+  </HediffDef>
+
+  <ThoughtDef>
+    <defName>LemonBalmHigh</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>LemonBalmHigh</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>Lemon Balm warmth</label>
+        <description>Lemon Balm makes me feel more relaxed, and the metabolism is improved.</description>
+        <baseMoodEffect>5</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  
+  <ChemicalDef>
+    <defName>LemonBalm</defName>
+    <label>Lemon Balm</label>
+    <addictionHediff>LemonBalmAddiction</addictionHediff>
+    <toleranceHediff>LemonBalmTolerance</toleranceHediff>
+    <onGeneratedAddictedToleranceChance>0.8</onGeneratedAddictedToleranceChance>
+  </ChemicalDef>
+  
+  <NeedDef ParentName="DrugAddictionNeedBase">
+    <defName>Chemical_LemonBalm</defName>
+    <needClass>Need_Chemical</needClass>
+    <label>Lemon Balm</label>
+    <description>Because of an Lemon Balm addiction, this person needs to regularly consume Lemon Balm to avoid withdrawal symptoms.</description>
+    <listPriority>20</listPriority>
+  </NeedDef>
+
+  <HediffDef ParentName="DrugToleranceBase">
+    <defName>LemonBalmTolerance</defName>
+    <label>Lemon Balm tolerance</label>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.020</severityPerDay>
+      </li>
+      <li Class="HediffCompProperties_DrugEffectFactor">
+        <chemical>LemonBalm</chemical>
+      </li>
+    </comps>
+  </HediffDef>
+  
+  <HediffDef ParentName="AddictionBase">
+    <defName>LemonBalmAddiction</defName>
+    <hediffClass>Hediff_Addiction</hediffClass>
+    <label>Lemon Balm addiction</label>
+    <causesNeed>Chemical_LemonBalm</causesNeed>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.1</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+      </li>
+      <li>
+        <label>withdrawal</label>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThoughtDef>
+    <defName>LemonBalmWithdrawal</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>LemonBalmAddiction</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <visible>false</visible>
+      </li>
+      <li>
+        <label>Lemon Balm withdrawal</label>
+        <description>I feel heavy and cold all the time. I never thought I'd want a piece of herb so much.</description>
+        <baseMoodEffect>-10</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+</Defs>

@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<Defs>
+
+
+<!--flooring-->
+<RecipeDef>
+    <defName>BarkCutting</defName>
+    <label>cut the bark from a wood log</label>
+    <description>Cut the bark from a wood log used for mulch flooring.</description>
+    <jobString>Cutting Bark.</jobString>
+    <workAmount>600</workAmount>
+    <workSpeedStat>SculptingSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Sculpt</effectWorking>
+      <soundWorking>Recipe_Sculpt</soundWorking>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>WoodLog</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+    </ingredients>
+    <products>
+      <WGBark>20</WGBark>
+    </products>
+	<researchPrerequisite>WGFloorRes</researchPrerequisite>
+    <recipeUsers>
+        <li>CraftingSpot</li>
+    </recipeUsers>
+  </RecipeDef>
+  
+  <RecipeDef Name="WGCookMealBase" Abstract="True">
+		<fixedIngredientFilter>
+			<categories>
+				<li>PlantFoodRaw</li>
+			</categories>
+			<specialFiltersToDisallow>
+				<li>AllowPlantFood</li>
+			</specialFiltersToDisallow>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+			<categories>
+				<li>PlantFoodRaw</li>
+			</categories>
+		</defaultIngredientFilter>
+		<workSkill>Cooking</workSkill>
+	</RecipeDef>
+  
+  <RecipeDef ParentName="WGCookMealBase">
+    <defName>WGCompostStarterMaking</defName>
+    <label>make compost starter from veggetables</label>
+    <description>Make compost starter from veggetables used for better flooring.</description>
+    <jobString>Making compost starter</jobString>
+    <workAmount>550</workAmount>
+    <workSpeedStat>ButcheryFleshSpeed</workSpeedStat>
+    <effectWorking>ButcherFlesh</effectWorking>
+    <soundWorking>Recipe_ButcherCorpseFlesh</soundWorking>
+	<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    <ingredients>
+      <li>
+				<filter>
+					<categories>
+						<li>PlantFoodRaw</li>
+					</categories>
+				</filter>
+				<count>0.25</count>
+			</li>
+    </ingredients>
+    <products>
+      <WGCompostStarter>10</WGCompostStarter>
+    </products>
+	<researchPrerequisite>WGFloorRes</researchPrerequisite>
+    <recipeUsers>
+        <li>TableButcher</li>
+    </recipeUsers>
+  </RecipeDef>
+  
+  
+  <!--Herbal Medicine-->
+  <RecipeDef>
+    <defName>WGHerbalMedMaking1</defName>
+    <label>make herbal medicine from herbs. (1)</label>
+    <description>Make 1 herbal medicine from herbs.</description>
+    <jobString>Making herbal medicine</jobString>
+    <workAmount>700</workAmount>
+    <workSpeedStat>DrugCookingSpeed</workSpeedStat>
+    <workSkill>Intellectual</workSkill>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <ingredients>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>RawLavender</li>
+				</thingDefs>
+			</filter>
+			<count>0.5</count>
+		</li>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>RawYarrow</li>
+				</thingDefs>
+			</filter>
+			<count>1</count>
+		</li>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>RawPeppermint</li>
+				</thingDefs>
+			</filter>
+			<count>0.2</count>
+		</li>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>RawBasil</li>
+				</thingDefs>
+			</filter>
+			<count>0.2</count>
+		</li>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>RawRosmary</li>
+				</thingDefs>
+			</filter>
+			<count>1</count>
+		</li>
+    </ingredients>
+    <products>
+      <MedicineHerbal>1</MedicineHerbal>
+    </products>
+	<researchPrerequisite>WGHealingRes</researchPrerequisite>
+    <recipeUsers>
+        <li>DrugLab</li>
+		<li>CraftingSpot</li>
+    </recipeUsers>
+  </RecipeDef>
+  
+  <RecipeDef>
+    <defName>WGHerbalMedMaking2</defName>
+    <label>make herbal medicine from herbs. (2)</label>
+    <description>Make 1 herbal medicine from herbs.</description>
+    <jobString>Making herbal medicine</jobString>
+    <workAmount>700</workAmount>
+    <workSpeedStat>DrugCookingSpeed</workSpeedStat>
+    <workSkill>Intellectual</workSkill>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <ingredients>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>RawLavender</li>
+				</thingDefs>
+			</filter>
+			<count>0.4</count>
+		</li>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>RawYarrow</li>
+				</thingDefs>
+			</filter>
+			<count>0.6</count>
+		</li>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>RawThyme</li>
+				</thingDefs>
+			</filter>
+			<count>0.7</count>
+		</li>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>RawHellebores</li>
+				</thingDefs>
+			</filter>
+			<count>1</count>
+		</li>
+    </ingredients>
+    <products>
+      <MedicineHerbal>1</MedicineHerbal>
+    </products>
+	<researchPrerequisite>WGHealingRes</researchPrerequisite>
+    <recipeUsers>
+        <li>DrugLab</li>
+		<li>CraftingSpot</li>
+    </recipeUsers>
+  </RecipeDef>
+  
+  <RecipeDef>
+    <defName>WGHerbalMedMaking3</defName>
+    <label>make herbal medicine from herbs. (3)</label>
+    <description>Make 1 herbal medicine from herbs.</description>
+    <jobString>Making herbal medicine</jobString>
+    <workAmount>700</workAmount>
+    <workSpeedStat>DrugCookingSpeed</workSpeedStat>
+    <workSkill>Intellectual</workSkill>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <ingredients>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>RawCalendula</li>
+				</thingDefs>
+			</filter>
+			<count>0.5</count>
+		</li>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>RawComfrey</li>
+				</thingDefs>
+			</filter>
+			<count>0.7</count>
+		</li>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>RawPeppermint</li>
+				</thingDefs>
+			</filter>
+			<count>1.2</count>
+		</li>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>RawRosmary</li>
+				</thingDefs>
+			</filter>
+			<count>0.3</count>
+		</li>
+    </ingredients>
+    <products>
+      <MedicineHerbal>1</MedicineHerbal>
+    </products>
+	<researchPrerequisite>WGHealingRes</researchPrerequisite>
+    <recipeUsers>
+        <li>DrugLab</li>
+		<li>CraftingSpot</li>
+    </recipeUsers>
+  </RecipeDef>
+  
+  <RecipeDef>
+    <defName>WGHerbalMedMaking4</defName>
+    <label>make herbal medicine from herbs. (4)</label>
+    <description>Make 1 herbal medicine from herbs.</description>
+    <jobString>Making herbal medicine</jobString>
+    <workAmount>700</workAmount>
+    <workSpeedStat>DrugCookingSpeed</workSpeedStat>
+    <workSkill>Intellectual</workSkill>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <ingredients>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>RawCalendula</li>
+				</thingDefs>
+			</filter>
+			<count>0.3</count>
+		</li>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>RawComfrey</li>
+				</thingDefs>
+			</filter>
+			<count>0.2</count>
+		</li>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>RawHellebores</li>
+				</thingDefs>
+			</filter>
+			<count>0.7</count>
+		</li>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>RawLavender</li>
+				</thingDefs>
+			</filter>
+			<count>1.5</count>
+		</li>
+    </ingredients>
+    <products>
+      <MedicineHerbal>1</MedicineHerbal>
+    </products>
+	<researchPrerequisite>WGHealingRes</researchPrerequisite>
+    <recipeUsers>
+        <li>DrugLab</li>
+		<li>CraftingSpot</li>
+    </recipeUsers>
+  </RecipeDef>
+  
+  <!--Bulk Herbal Medicine-->
+  <RecipeDef>
+    <defName>WGHerbalMedMakingB1</defName>
+    <label>make bulk herbal medicine from herbs. (1)</label>
+    <description>Make 10 herbal medicine from herbs.</description>
+    <jobString>Making herbal medicine</jobString>
+    <workAmount>2000</workAmount>
+    <workSpeedStat>DrugCookingSpeed</workSpeedStat>
+    <workSkill>Intellectual</workSkill>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <ingredients>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>RawLavender</li>
+				</thingDefs>
+			</filter>
+			<count>5</count>
+		</li>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>RawYarrow</li>
+				</thingDefs>
+			</filter>
+			<count>10</count>
+		</li>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>RawPeppermint</li>
+				</thingDefs>
+			</filter>
+			<count>2</count>
+		</li>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>RawBasil</li>
+				</thingDefs>
+			</filter>
+			<count>2</count>
+		</li>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>RawRosmary</li>
+				</thingDefs>
+			</filter>
+			<count>10</count>
+		</li>
+    </ingredients>
+    <products>
+      <MedicineHerbal>10</MedicineHerbal>
+    </products>
+	<researchPrerequisite>WGHealingRes</researchPrerequisite>
+    <recipeUsers>
+        <li>DrugLab</li>
+		<li>CraftingSpot</li>
+    </recipeUsers>
+  </RecipeDef>
+  
+  <RecipeDef>
+    <defName>WGHerbalMedMakingB2</defName>
+    <label>make bulk herbal medicine from herbs. (2)</label>
+    <description>Make 10 herbal medicine from herbs.</description>
+    <jobString>Making herbal medicine</jobString>
+    <workAmount>2000</workAmount>
+    <workSpeedStat>DrugCookingSpeed</workSpeedStat>
+    <workSkill>Intellectual</workSkill>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <ingredients>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>RawLavender</li>
+				</thingDefs>
+			</filter>
+			<count>4</count>
+		</li>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>RawYarrow</li>
+				</thingDefs>
+			</filter>
+			<count>6</count>
+		</li>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>RawThyme</li>
+				</thingDefs>
+			</filter>
+			<count>7</count>
+		</li>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>RawHellebores</li>
+				</thingDefs>
+			</filter>
+			<count>10</count>
+		</li>
+    </ingredients>
+    <products>
+      <MedicineHerbal>10</MedicineHerbal>
+    </products>
+	<researchPrerequisite>WGHealingRes</researchPrerequisite>
+    <recipeUsers>
+        <li>DrugLab</li>
+		<li>CraftingSpot</li>
+    </recipeUsers>
+  </RecipeDef>
+  
+  <RecipeDef>
+    <defName>WGHerbalMedMakingB3</defName>
+    <label>make bulk herbal medicine from herbs. (3)</label>
+    <description>Make 10 herbal medicine from herbs.</description>
+    <jobString>Making herbal medicine</jobString>
+    <workAmount>2000</workAmount>
+    <workSpeedStat>DrugCookingSpeed</workSpeedStat>
+    <workSkill>Intellectual</workSkill>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <ingredients>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>RawCalendula</li>
+				</thingDefs>
+			</filter>
+			<count>5</count>
+		</li>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>RawComfrey</li>
+				</thingDefs>
+			</filter>
+			<count>7</count>
+		</li>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>RawPeppermint</li>
+				</thingDefs>
+			</filter>
+			<count>12</count>
+		</li>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>RawRosmary</li>
+				</thingDefs>
+			</filter>
+			<count>3</count>
+		</li>
+    </ingredients>
+    <products>
+      <MedicineHerbal>10</MedicineHerbal>
+    </products>
+	<researchPrerequisite>WGHealingRes</researchPrerequisite>
+    <recipeUsers>
+        <li>DrugLab</li>
+		<li>CraftingSpot</li>
+    </recipeUsers>
+  </RecipeDef>
+  
+  <RecipeDef>
+    <defName>WGHerbalMedMakingB4</defName>
+    <label>make bulk herbal medicine from herbs. (4)</label>
+    <description>Make 10 herbal medicine from herbs.</description>
+    <jobString>Making herbal medicine</jobString>
+    <workAmount>2000</workAmount>
+    <workSpeedStat>DrugCookingSpeed</workSpeedStat>
+    <workSkill>Intellectual</workSkill>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <ingredients>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>RawCalendula</li>
+				</thingDefs>
+			</filter>
+			<count>3</count>
+		</li>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>RawComfrey</li>
+				</thingDefs>
+			</filter>
+			<count>2</count>
+		</li>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>RawHellebores</li>
+				</thingDefs>
+			</filter>
+			<count>7</count>
+		</li>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>RawLavender</li>
+				</thingDefs>
+			</filter>
+			<count>15</count>
+		</li>
+    </ingredients>
+    <products>
+      <MedicineHerbal>10</MedicineHerbal>
+    </products>
+	<researchPrerequisite>WGHealingRes</researchPrerequisite>
+    <recipeUsers>
+        <li>DrugLab</li>
+		<li>CraftingSpot</li>
+    </recipeUsers>
+  </RecipeDef>
+
+</Defs>

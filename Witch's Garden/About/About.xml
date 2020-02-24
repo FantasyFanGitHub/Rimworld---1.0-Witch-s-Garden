@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>[1.0] Witch's Garden</name>
+	<author>FantasyFan</author>
+	<targetVersion>1.0.2150</targetVersion>
+	<description>
+Have you ever wanted to grow a witch garden with many herbs and flowers. Now you can.
+
+This mod adds 19 different plants:
+-Rosmary
+-Basil
+-Lavender
+-Yarrow
+-Hellebores
+-Comfrey
+-Peppermint (can only be grown in flower pots or hydroponics)
+-Thyme
+-Calendula
+-Mint (can only be grown in flower pots or hydroponics)
+-Chamomile
+-Sage
+-Lemon Balm
+-Nettle
+-Mugwort
+-Chives
+-Parsley
+-Lilacs (decorative)
+-Dianthus (decorative)
+
+One new workbench:
+-Composter (compost Compost starter (veggies at butcher table) to Compost for better fertility flooring)
+
+Five research projects
+
+Seven herb teas and one fine meal with herbs
+
+Two new floors:
+-Mulch (120% Fertility - turn wood into bark at crafting spot)
+-Compost (135% Fertility)
+
+
+Can be added to existing saves.
+
+
+If you find things unbalanced, please make suggestions for improvement.
+	</description>
+</ModMetaData>

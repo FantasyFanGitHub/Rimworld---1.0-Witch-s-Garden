@@ -1,0 +1,805 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+<!--   Fertility++   -->
+	<ThingDef ParentName="PlantBase">
+		<defName>RosmaryPlant</defName>
+		<label>Rosmary</label>
+		<graphicData>
+			<texPath>Things/Plant/RosmaryPlant</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+		</graphicData>
+		<description>Rosemary is a woody, perennial herb with fragrant, evergreen, needle-like leaves and white, pink, purple, or blue flowers, native to the Mediterranean region.</description>
+		<statBases>
+			<MaxHitPoints>85</MaxHitPoints>
+      		<Nutrition>0.18</Nutrition>
+		</statBases>
+		<selectable>true</selectable>
+		<pathCost>10</pathCost>
+    <ingestible />
+		<plant>
+			<fertilityMin>0.70</fertilityMin>
+			<harvestTag>Standard</harvestTag>
+			<harvestedThingDef>RawRosmary</harvestedThingDef>
+			<harvestYield>30</harvestYield>
+			<growDays>3</growDays>
+			<sowResearchPrerequisites>
+				<li>WGFoodRes</li>
+			</sowResearchPrerequisites>
+			<sowTags>
+				<li>Ground</li>
+				<li>Hydroponic</li>
+			</sowTags>
+			<sowMinSkill>5</sowMinSkill>
+			<dieIfLeafless>true</dieIfLeafless>
+			<maxMeshCount>4</maxMeshCount>
+			<topWindExposure>0.1</topWindExposure>
+			<visualSizeRange>
+				<min>0.4</min>
+				<max>1.1</max>
+			</visualSizeRange>
+			<wildOrder>2</wildOrder>
+      		<purpose>Food</purpose>
+		</plant>
+	</ThingDef>
+	
+	<ThingDef ParentName="PlantBase">
+		<defName>BasilPlant</defName>
+		<label>Basil</label>
+		<graphicData>
+			<texPath>Things/Plant/BasilPlant</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+		</graphicData>
+		<description>Basil is a culinary herb of the mint family. Basil is native to tropical regions from central Africa to Southeast Asia.</description>
+		<statBases>
+			<MaxHitPoints>85</MaxHitPoints>
+      		<Nutrition>0.18</Nutrition>
+		</statBases>
+		<selectable>true</selectable>
+		<pathCost>10</pathCost>
+    <ingestible />
+		<plant>
+			<fertilityMin>0.70</fertilityMin>
+			<harvestTag>Standard</harvestTag>
+			<harvestedThingDef>RawBasil</harvestedThingDef>
+			<harvestYield>30</harvestYield>
+			<growDays>3</growDays>
+			<sowResearchPrerequisites>
+				<li>WGFoodRes</li>
+			</sowResearchPrerequisites>
+			<sowTags>
+				<li>Ground</li>
+				<li>Hydroponic</li>
+			</sowTags>
+			<sowMinSkill>5</sowMinSkill>
+			<dieIfLeafless>true</dieIfLeafless>
+			<maxMeshCount>4</maxMeshCount>
+			<topWindExposure>0.1</topWindExposure>
+			<visualSizeRange>
+				<min>0.4</min>
+				<max>1.1</max>
+			</visualSizeRange>
+			<wildOrder>2</wildOrder>
+      		<purpose>Food</purpose>
+		</plant>
+	</ThingDef>
+	
+	<ThingDef ParentName="PlantBase">
+		<defName>HelleboresPlant</defName>
+		<label>Hellebores</label>
+		<graphicData>
+			<texPath>Things/Plant/HelleboresPlant/HelleboresPlant</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<description>The Eurasian genus Helleborus consists of approximately 20 species of herbaceous or evergreen perennial flowering plants in the family Ranunculaceae, within which it gave its name to the tribe of Helleboreae. Medicine item.</description>
+		<statBases>
+			<MaxHitPoints>85</MaxHitPoints>
+      		<Nutrition>0.18</Nutrition>
+			<Beauty>6</Beauty>
+		</statBases>
+		<altitudeLayer>Item</altitudeLayer>
+		<selectable>true</selectable>
+		<pathCost>10</pathCost>
+    <ingestible />
+		<plant>
+			<fertilityMin>0.70</fertilityMin>
+			<harvestTag>Standard</harvestTag>
+			<harvestedThingDef>RawHellebores</harvestedThingDef>
+			<harvestYield>70</harvestYield>
+			<growDays>8</growDays>
+			<sowResearchPrerequisites>
+				<li>WGHealingRes</li>
+			</sowResearchPrerequisites>
+			<sowTags>
+				<li>Ground</li>
+				<li>Hydroponic</li>
+				<li>Decorative</li>
+			</sowTags>
+			<sowMinSkill>5</sowMinSkill>
+			<dieIfLeafless>true</dieIfLeafless>
+			<maxMeshCount>4</maxMeshCount>
+			<topWindExposure>0.1</topWindExposure>
+			<visualSizeRange>
+				<min>0.4</min>
+				<max>1.1</max>
+			</visualSizeRange>
+			<wildOrder>2</wildOrder>
+		</plant>
+	</ThingDef>
+	
+	<ThingDef ParentName="PlantBase">
+		<defName>CalendulaPlant</defName>
+		<label>Calendula</label>
+		<graphicData>
+			
+			<texPath>Things/Plant/CalendulaPlant</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+		</graphicData>
+		<description>Calendula, is a genus of about 15–20 species of annual and perennial herbaceous plants in the daisy family Asteraceae that are often known as marigolds. They are native to southwestern Asia, western Europe, Macaronesia, and the Mediterranean. Medicine item.</description>
+		<statBases>
+			<MaxHitPoints>85</MaxHitPoints>
+      		<Nutrition>0.18</Nutrition>
+		</statBases>
+		<selectable>true</selectable>
+		<pathCost>10</pathCost>
+    <ingestible />
+		<plant>
+			<fertilityMin>0.70</fertilityMin>
+			<harvestTag>Standard</harvestTag>
+			<harvestedThingDef>RawCalendula</harvestedThingDef>
+			<harvestYield>40</harvestYield>
+			<growDays>5</growDays>
+			<sowResearchPrerequisites>
+				<li>WGHealingRes</li>
+			</sowResearchPrerequisites>
+			<sowTags>
+				<li>Ground</li>
+				<li>Hydroponic</li>
+			</sowTags>
+			<sowMinSkill>5</sowMinSkill>
+			<dieIfLeafless>true</dieIfLeafless>
+			<maxMeshCount>4</maxMeshCount>
+			<topWindExposure>0.1</topWindExposure>
+			<visualSizeRange>
+				<min>0.4</min>
+				<max>1.1</max>
+			</visualSizeRange>
+			<wildOrder>2</wildOrder>
+      		<purpose>Food</purpose>
+		</plant>
+	</ThingDef>
+	
+	<ThingDef ParentName="PlantBase">
+		<defName>DianthusPlant</defName>
+		<label>Dianthus</label>
+		<graphicData>
+			<texPath>Things/Plant/DianthusPlant/DianthusPlant</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<description>Dianthus is a genus of about 300 species of flowering plants in the family Caryophyllaceae, native mainly to Europe and Asia, with a few species extending south to north Africa, and one species (D. repens) in arctic North America. Decorative plant.</description>
+		<statBases>
+			<MaxHitPoints>85</MaxHitPoints>
+      		<Nutrition>0.18</Nutrition>
+			<Beauty>16</Beauty>
+		</statBases>
+		<altitudeLayer>Item</altitudeLayer>
+		<selectable>true</selectable>
+		<pathCost>10</pathCost>
+    <ingestible />
+		<plant>
+			<fertilityMin>0.70</fertilityMin>
+			<harvestTag>Standard</harvestTag>
+			<growDays>3</growDays>
+			<purpose>Beauty</purpose>
+			<lifespanDaysPerGrowDays>5</lifespanDaysPerGrowDays>
+			<wildOrder>1</wildOrder>
+			<sowResearchPrerequisites>
+				<li>WGDecoRes</li>
+			</sowResearchPrerequisites>
+			<sowTags>
+				<li>Ground</li>
+				<li>Hydroponic</li>
+				<li>Decorative</li>
+			</sowTags>
+			<sowMinSkill>5</sowMinSkill>
+			<dieIfLeafless>true</dieIfLeafless>
+			<maxMeshCount>4</maxMeshCount>
+			<topWindExposure>0.1</topWindExposure>
+			<visualSizeRange>
+				<min>0.4</min>
+				<max>1.1</max>
+			</visualSizeRange>
+		</plant>
+	</ThingDef>
+	
+	<ThingDef ParentName="PlantBase">
+		<defName>LilacsPlant</defName>
+		<label>Lilacs</label>
+		<graphicData>
+			<texPath>Things/Plant/LilacsPlant/LilacsPlant</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<description>Lilac is a genus of 12 currently recognized species of flowering woody plants in the olive family (Oleaceae), native to woodland and scrub from southeastern Europe to eastern Asia, and widely and commonly cultivated in temperate areas elsewhere. Decorative plant.</description>
+		<statBases>
+			<MaxHitPoints>85</MaxHitPoints>
+      		<Nutrition>0.18</Nutrition>
+			<Beauty>17</Beauty>
+		</statBases>
+		<altitudeLayer>Item</altitudeLayer>
+		<selectable>true</selectable>
+		<pathCost>10</pathCost>
+    <ingestible />
+		<plant>
+			<fertilityMin>0.70</fertilityMin>
+			<harvestTag>Standard</harvestTag>
+			<growDays>4</growDays>
+			<purpose>Beauty</purpose>
+			<lifespanDaysPerGrowDays>7</lifespanDaysPerGrowDays>
+			<wildOrder>1</wildOrder>
+			<sowResearchPrerequisites>
+				<li>WGDecoRes</li>
+			</sowResearchPrerequisites>
+			<sowTags>
+				<li>Ground</li>
+				<li>Hydroponic</li>
+				<li>Decorative</li>
+			</sowTags>
+			<sowMinSkill>5</sowMinSkill>
+			<dieIfLeafless>true</dieIfLeafless>
+			<maxMeshCount>4</maxMeshCount>
+			<topWindExposure>0.1</topWindExposure>
+			<visualSizeRange>
+				<min>0.4</min>
+				<max>1.1</max>
+			</visualSizeRange>
+		</plant>
+	</ThingDef>
+	
+<!--   fertility+  -->
+	<ThingDef ParentName="PlantBase">
+		<defName>YarrowPlant</defName>
+		<label>Yarrow</label>
+		<graphicData>
+			<texPath>Things/Plant/YarrowPlant/YarrowPlant</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<description>Yarrow is a flowering plant in the family Asteraceae. It is native to temperate regions of the Northern Hemisphere in Asia, Europe, and North America.</description>
+		<statBases>
+			<MaxHitPoints>85</MaxHitPoints>
+      		<Nutrition>0.18</Nutrition>
+			<Beauty>7</Beauty>
+		</statBases>
+		<altitudeLayer>Item</altitudeLayer>
+		<selectable>true</selectable>
+		<pathCost>10</pathCost>
+    <ingestible />
+		<plant>
+			<fertilitySensitivity>0.6</fertilitySensitivity>
+			<harvestTag>Standard</harvestTag>
+			<harvestedThingDef>RawYarrow</harvestedThingDef>
+			<harvestYield>45</harvestYield>
+			<growDays>6</growDays>
+			<sowResearchPrerequisites>
+				<li>WGHealingRes</li>
+			</sowResearchPrerequisites>
+			<sowTags>
+				<li>Ground</li>
+				<li>Hydroponic</li>
+				<li>Decorative</li>
+			</sowTags>
+			<sowMinSkill>5</sowMinSkill>
+			<dieIfLeafless>true</dieIfLeafless>
+			<maxMeshCount>4</maxMeshCount>
+			<topWindExposure>0.1</topWindExposure>
+			<visualSizeRange>
+				<min>0.4</min>
+				<max>1.1</max>
+			</visualSizeRange>
+			<wildOrder>2</wildOrder>
+		</plant>
+	</ThingDef>
+	
+	<ThingDef ParentName="PlantBase">
+		<defName>ComfreyPlant</defName>
+		<label>Comfrey</label>
+		<graphicData>
+			<texPath>Things/Plant/ComfreyPlant</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+		</graphicData>
+		<description>Symphytum is a genus of flowering plants in the borage family, Boraginaceae. There are up to 35 species, known by the common name comfrey. Medicine item.</description>
+		<statBases>
+			<MaxHitPoints>85</MaxHitPoints>
+      		<Nutrition>0.18</Nutrition>
+		</statBases>
+		<selectable>true</selectable>
+		<pathCost>10</pathCost>
+    <ingestible />
+		<plant>
+			<fertilitySensitivity>0.6</fertilitySensitivity>
+			<harvestTag>Standard</harvestTag>
+			<harvestedThingDef>RawComfrey</harvestedThingDef>
+			<harvestYield>55</harvestYield>
+			<growDays>7</growDays>
+			<sowResearchPrerequisites>
+				<li>WGHealingRes</li>
+			</sowResearchPrerequisites>
+			<sowTags>
+				<li>Ground</li>
+				<li>Hydroponic</li>
+			</sowTags>
+			<sowMinSkill>5</sowMinSkill>
+			<dieIfLeafless>true</dieIfLeafless>
+			<maxMeshCount>4</maxMeshCount>
+			<topWindExposure>0.1</topWindExposure>
+			<visualSizeRange>
+				<min>0.4</min>
+				<max>1.1</max>
+			</visualSizeRange>
+			<wildOrder>2</wildOrder>
+		</plant>
+	</ThingDef>
+	
+	<ThingDef ParentName="PlantBase">
+		<defName>PeppermintPlant</defName>
+		<label>Peppermint</label>
+		<graphicData>
+			<texPath>Things/Plant/PeppermintPlant/PeppermintPlant</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<description>Peppermint is a hybrid mint, a cross between watermint and spearmint. Indigenous to Europe and the Middle East, the plant is now widely spread and cultivated in many regions of the world.</description>
+		<statBases>
+			<MaxHitPoints>85</MaxHitPoints>
+      		<Nutrition>0.18</Nutrition>
+		</statBases>
+		<altitudeLayer>Item</altitudeLayer>
+		<selectable>true</selectable>
+		<pathCost>10</pathCost>
+    <ingestible />
+		<plant>
+			<fertilitySensitivity>0.6</fertilitySensitivity>
+			<harvestTag>Standard</harvestTag>
+			<harvestedThingDef>RawPeppermint</harvestedThingDef>
+			<harvestYield>55</harvestYield>
+			<growDays>7</growDays>
+			<sowResearchPrerequisites>
+				<li>WGHealingRes</li>
+			</sowResearchPrerequisites>
+			<sowTags>
+				<li>Decorative</li>
+				<li>Hydroponic</li>
+			</sowTags>
+			<sowMinSkill>5</sowMinSkill>
+			<dieIfLeafless>true</dieIfLeafless>
+			<topWindExposure>0.1</topWindExposure>
+			<visualSizeRange>
+				<min>0.4</min>
+				<max>1.1</max>
+			</visualSizeRange>
+			<wildOrder>2</wildOrder>
+      		<purpose>Food</purpose>
+		</plant>
+	</ThingDef>
+	
+	<ThingDef ParentName="PlantBase">
+		<defName>MintPlant</defName>
+		<label>Mint</label>
+		<graphicData>
+			<texPath>Things/Plant/MintPlant/MintPlant</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<description>Mint is a genus of plants in the mint family. The genus has a subcosmopolitan distribution across Europe, Africa, Asia, Australia, and North America.</description>
+		<statBases>
+			<MaxHitPoints>85</MaxHitPoints>
+      		<Nutrition>0.18</Nutrition>
+		</statBases>
+		<altitudeLayer>Item</altitudeLayer>
+		<selectable>true</selectable>
+		<pathCost>10</pathCost>
+    <ingestible />
+		<plant>
+			<fertilitySensitivity>0.6</fertilitySensitivity>
+			<harvestTag>Standard</harvestTag>
+			<harvestedThingDef>RawMint</harvestedThingDef>
+			<harvestYield>55</harvestYield>
+			<growDays>7</growDays>
+			<sowResearchPrerequisites>
+				<li>WGFoodRes</li>
+			</sowResearchPrerequisites>
+			<sowTags>
+				<li>Decorative</li>
+				<li>Hydroponic</li>
+			</sowTags>
+			<sowMinSkill>5</sowMinSkill>
+			<dieIfLeafless>true</dieIfLeafless>
+			<topWindExposure>0.1</topWindExposure>
+			<visualSizeRange>
+				<min>0.4</min>
+				<max>1.1</max>
+			</visualSizeRange>
+			<wildOrder>2</wildOrder>
+      		<purpose>Food</purpose>
+		</plant>
+	</ThingDef>
+	
+	<ThingDef ParentName="PlantBase">
+		<defName>ChamomilePlant</defName>
+		<label>Chamomile</label>
+		<graphicData>
+			<texPath>Things/Plant/ChamomilePlant/ChamomilePlant</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<description>Chamomile is the common name for several daisy-like plants of the family Asteraceae.</description>
+		<statBases>
+			<MaxHitPoints>85</MaxHitPoints>
+      		<Nutrition>0.18</Nutrition>
+			<Beauty>10</Beauty>
+		</statBases>
+		<altitudeLayer>Item</altitudeLayer>
+		<selectable>true</selectable>
+		<pathCost>10</pathCost>
+    <ingestible />
+		<plant>
+			<fertilitySensitivity>0.6</fertilitySensitivity>
+			<harvestTag>Standard</harvestTag>
+			<harvestedThingDef>RawChamomile</harvestedThingDef>
+			<harvestYield>40</harvestYield>
+			<growDays>6</growDays>
+			<sowResearchPrerequisites>
+				<li>WGFoodRes</li>
+			</sowResearchPrerequisites>
+			<sowTags>
+				<li>Ground</li>
+				<li>Hydroponic</li>
+				<li>Decorative</li>
+			</sowTags>
+			<sowMinSkill>5</sowMinSkill>
+			<dieIfLeafless>true</dieIfLeafless>
+			<maxMeshCount>4</maxMeshCount>
+			<topWindExposure>0.1</topWindExposure>
+			<visualSizeRange>
+				<min>0.4</min>
+				<max>1.1</max>
+			</visualSizeRange>
+			<wildOrder>2</wildOrder>
+      		<purpose>Food</purpose>
+		</plant>
+	</ThingDef>
+	
+	<ThingDef ParentName="PlantBase">
+		<defName>LemonBalmPlant</defName>
+		<label>LemonBalm</label>
+		<graphicData>
+			<texPath>Things/Plant/LemonBalmPlant</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+		</graphicData>
+		<description>Lemon balm is a plant in the mint family and native to south-central Europe, the Mediterranean Basin, Iran, and Central Asia, but now naturalized in the Americas and elsewhere.</description>
+		<statBases>
+			<MaxHitPoints>85</MaxHitPoints>
+      		<Nutrition>0.18</Nutrition>
+		</statBases>
+		<selectable>true</selectable>
+		<pathCost>10</pathCost>
+    <ingestible />
+		<plant>
+			<fertilitySensitivity>0.6</fertilitySensitivity>
+			<harvestTag>Standard</harvestTag>
+			<harvestedThingDef>RawLemonBalm</harvestedThingDef>
+			<harvestYield>37</harvestYield>
+			<growDays>5</growDays>
+			<sowResearchPrerequisites>
+				<li>WGFoodRes</li>
+			</sowResearchPrerequisites>
+			<sowTags>
+				<li>Ground</li>
+				<li>Hydroponic</li>
+			</sowTags>
+			<sowMinSkill>5</sowMinSkill>
+			<dieIfLeafless>true</dieIfLeafless>
+			<maxMeshCount>4</maxMeshCount>
+			<topWindExposure>0.1</topWindExposure>
+			<visualSizeRange>
+				<min>0.4</min>
+				<max>1.1</max>
+			</visualSizeRange>
+			<wildOrder>2</wildOrder>
+      		<purpose>Food</purpose>
+		</plant>
+	</ThingDef>
+	
+	<ThingDef ParentName="PlantBase">
+		<defName>Plant_Healroot</defName>
+		<label>Nettle</label>
+		<graphicData>
+			<texPath>Things/Plant/NettlePlant</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+		</graphicData>
+		<description>Urtica is a genus of flowering plants in the family Urticaceae. Many species have stinging hairs and may be called nettle.</description>
+		<statBases>
+			<MaxHitPoints>85</MaxHitPoints>
+      		<Nutrition>0.18</Nutrition>
+		</statBases>
+		<selectable>true</selectable>
+		<pathCost>10</pathCost>
+    <ingestible />
+		<plant>
+			<fertilitySensitivity>0.6</fertilitySensitivity>
+			<harvestTag>Standard</harvestTag>
+			<harvestedThingDef>RawNettle</harvestedThingDef>
+			<harvestYield>50</harvestYield>
+			<growDays>7</growDays>
+			<sowResearchPrerequisites>
+				<li>WGFoodRes</li>
+			</sowResearchPrerequisites>
+			<sowTags>
+				<li>Ground</li>
+				<li>Hydroponic</li>
+			</sowTags>
+			<sowMinSkill>5</sowMinSkill>
+			<dieIfLeafless>true</dieIfLeafless>
+			<maxMeshCount>4</maxMeshCount>
+			<topWindExposure>0.1</topWindExposure>
+			<visualSizeRange>
+				<min>0.4</min>
+				<max>1.1</max>
+			</visualSizeRange>
+			<wildOrder>2</wildOrder>
+      		<purpose>Food</purpose>
+		</plant>
+	</ThingDef>
+	
+	<ThingDef ParentName="PlantBase">
+		<defName>MugwortPlant</defName>
+		<label>Mugwort</label>
+		<graphicData>
+			<texPath>Things/Plant/MugwortPlant</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+		</graphicData>
+		<description>Mugwort is a common name for several species of aromatic plants in the genus Artemisia. In Europe, mugwort most often refers to the species Artemisia vulgaris, or common mugwort.</description>
+		<statBases>
+			<MaxHitPoints>85</MaxHitPoints>
+      		<Nutrition>0.18</Nutrition>
+		</statBases>
+		<selectable>true</selectable>
+		<pathCost>10</pathCost>
+    <ingestible />
+		<plant>
+			<fertilitySensitivity>0.6</fertilitySensitivity>
+			<harvestTag>Standard</harvestTag>
+			<harvestedThingDef>RawMugwortRoot</harvestedThingDef>
+			<harvestYield>60</harvestYield>
+			<growDays>8</growDays>
+			<sowResearchPrerequisites>
+				<li>WGFoodRes</li>
+			</sowResearchPrerequisites>
+			<sowTags>
+				<li>Ground</li>
+				<li>Hydroponic</li>
+			</sowTags>
+			<sowMinSkill>5</sowMinSkill>
+			<dieIfLeafless>true</dieIfLeafless>
+			<maxMeshCount>4</maxMeshCount>
+			<topWindExposure>0.1</topWindExposure>
+			<visualSizeRange>
+				<min>0.4</min>
+				<max>1.1</max>
+			</visualSizeRange>
+			<wildOrder>2</wildOrder>
+      		<purpose>Food</purpose>
+		</plant>
+	</ThingDef>
+	
+	<ThingDef ParentName="PlantBase">
+		<defName>ParsleyPlant</defName>
+		<label>Parsley</label>
+		<graphicData>
+			<texPath>Things/Plant/ParsleyPlant</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+		</graphicData>
+		<description>Parsley is a species of flowering plant in the family Apiaceae that is native to the central Mediterranean region, but has naturalized elsewhere in Europe.</description>
+		<statBases>
+			<MaxHitPoints>85</MaxHitPoints>
+      		<Nutrition>0.18</Nutrition>
+		</statBases>
+		<selectable>true</selectable>
+		<pathCost>10</pathCost>
+    <ingestible />
+		<plant>
+			<fertilitySensitivity>0.6</fertilitySensitivity>
+			<harvestTag>Standard</harvestTag>
+			<harvestedThingDef>RawParsley</harvestedThingDef>
+			<harvestYield>35</harvestYield>
+			<growDays>4</growDays>
+			<sowResearchPrerequisites>
+				<li>WGFoodRes</li>
+			</sowResearchPrerequisites>
+			<sowTags>
+				<li>Ground</li>
+				<li>Hydroponic</li>
+			</sowTags>
+			<sowMinSkill>5</sowMinSkill>
+			<dieIfLeafless>true</dieIfLeafless>
+			<maxMeshCount>4</maxMeshCount>
+			<topWindExposure>0.1</topWindExposure>
+			<visualSizeRange>
+				<min>0.4</min>
+				<max>1.1</max>
+			</visualSizeRange>
+			<wildOrder>2</wildOrder>
+      		<purpose>Food</purpose>
+		</plant>
+	</ThingDef>
+	
+	<ThingDef ParentName="PlantBase">
+		<defName>ChivesPlant</defName>
+		<label>Chives</label>
+		<graphicData>
+			<texPath>Things/Plant/ChivesPlant</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+		</graphicData>
+		<description>Chives are an edible species of the genus Allium. It is widespread in nature across much of Europe, Asia, and North America.</description>
+		<statBases>
+			<MaxHitPoints>85</MaxHitPoints>
+      		<Nutrition>0.18</Nutrition>
+		</statBases>
+		<selectable>true</selectable>
+		<pathCost>10</pathCost>
+    <ingestible />
+		<plant>
+			<fertilitySensitivity>0.6</fertilitySensitivity>
+			<harvestTag>Standard</harvestTag>
+			<harvestedThingDef>RawChives</harvestedThingDef>
+			<harvestYield>50</harvestYield>
+			<growDays>7</growDays>
+			<sowResearchPrerequisites>
+				<li>WGFoodRes</li>
+			</sowResearchPrerequisites>
+			<sowTags>
+				<li>Ground</li>
+				<li>Hydroponic</li>
+			</sowTags>
+			<sowMinSkill>5</sowMinSkill>
+			<dieIfLeafless>true</dieIfLeafless>
+			<maxMeshCount>4</maxMeshCount>
+			<topWindExposure>0.1</topWindExposure>
+			<visualSizeRange>
+				<min>0.4</min>
+				<max>1.1</max>
+			</visualSizeRange>
+			<wildOrder>2</wildOrder>
+      		<purpose>Food</purpose>
+		</plant>
+	</ThingDef>
+	
+<!--   fertility Gravel  -->
+	<ThingDef ParentName="PlantBase">
+		<defName>LavenderPlant</defName>
+		<label>Lavender</label>
+		<graphicData>
+			<texPath>Things/Plant/LavenderPlant/LavenderPlant</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<description>Lavender is a genus of 47 known species of flowering plants in the mint family. It is native to the Old World and is found from Cape Verde and the Canary Islands, Europe across to northern and eastern Africa, the Mediterranean, southwest Asia to southeast India.</description>
+		<statBases>
+			<MaxHitPoints>85</MaxHitPoints>
+      		<Nutrition>0.18</Nutrition>
+			<Beauty>8</Beauty>
+		</statBases>
+		<altitudeLayer>Item</altitudeLayer>
+		<selectable>true</selectable>
+		<pathCost>10</pathCost>
+    <ingestible />
+		<plant>
+			<fertilitySensitivity>0.4</fertilitySensitivity>
+			<harvestTag>Standard</harvestTag>
+			<harvestedThingDef>RawLavender</harvestedThingDef>
+			<harvestYield>45</harvestYield>
+			<growDays>6</growDays>
+			<sowResearchPrerequisites>
+				<li>WGHealingRes</li>
+			</sowResearchPrerequisites>
+			<sowTags>
+				<li>Ground</li>
+				<li>Hydroponic</li>
+				<li>Decorative</li>
+			</sowTags>
+			<sowMinSkill>5</sowMinSkill>
+			<dieIfLeafless>true</dieIfLeafless>
+			<maxMeshCount>4</maxMeshCount>
+			<topWindExposure>0.1</topWindExposure>
+			<visualSizeRange>
+				<min>0.4</min>
+				<max>1.1</max>
+			</visualSizeRange>
+			<wildOrder>2</wildOrder>
+      		<purpose>Food</purpose>
+		</plant>
+	</ThingDef>
+	
+	<ThingDef ParentName="PlantBase">
+		<defName>ThymePlant</defName>
+		<label>Thyme</label>
+		<graphicData>
+			<texPath>Things/Plant/ThymePlant</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+		</graphicData>
+		<description>Thyme is any member of the genus Thymus of aromatic perennial evergreen herbs in the mint family.</description>
+		<statBases>
+			<MaxHitPoints>85</MaxHitPoints>
+      		<Nutrition>0.18</Nutrition>
+		</statBases>
+		<selectable>true</selectable>
+		<pathCost>10</pathCost>
+    <ingestible />
+		<plant>
+			<fertilitySensitivity>0.4</fertilitySensitivity>
+			<harvestTag>Standard</harvestTag>
+			<harvestedThingDef>RawThyme</harvestedThingDef>
+			<harvestYield>30</harvestYield>
+			<growDays>3</growDays>
+			<sowResearchPrerequisites>
+				<li>WGFoodRes</li>
+			</sowResearchPrerequisites>
+			<sowTags>
+				<li>Ground</li>
+				<li>Hydroponic</li>
+			</sowTags>
+			<sowMinSkill>5</sowMinSkill>
+			<dieIfLeafless>true</dieIfLeafless>
+			<maxMeshCount>4</maxMeshCount>
+			<topWindExposure>0.1</topWindExposure>
+			<visualSizeRange>
+				<min>0.4</min>
+				<max>1.1</max>
+			</visualSizeRange>
+			<wildOrder>2</wildOrder>
+      		<purpose>Food</purpose>
+		</plant>
+	</ThingDef>
+	
+	<ThingDef ParentName="PlantBase">
+		<defName>SagePlant</defName>
+		<label>Sage</label>
+		<graphicData>
+			<texPath>Things/Plant/SagePlant/SagePlant</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<description>Sage is a perennial, evergreen subshrub, with woody stems, grayish leaves, and blue to purplish flowers. It is a member of the mint family and native to the Mediterranean region.</description>
+		<statBases>
+			<MaxHitPoints>85</MaxHitPoints>
+      		<Nutrition>0.18</Nutrition>
+			<Beauty>7</Beauty>
+		</statBases>
+		<altitudeLayer>Item</altitudeLayer>
+		<selectable>true</selectable>
+		<pathCost>10</pathCost>
+    <ingestible />
+		<plant>
+			<fertilitySensitivity>0.4</fertilitySensitivity>
+			<harvestTag>Standard</harvestTag>
+			<harvestedThingDef>RawSage</harvestedThingDef>
+			<harvestYield>45</harvestYield>
+			<growDays>6</growDays>
+			<sowResearchPrerequisites>
+				<li>WGFoodRes</li>
+			</sowResearchPrerequisites>
+			<sowTags>
+				<li>Ground</li>
+				<li>Hydroponic</li>
+				<li>Decorative</li>
+			</sowTags>
+			<sowMinSkill>5</sowMinSkill>
+			<dieIfLeafless>true</dieIfLeafless>
+			<maxMeshCount>4</maxMeshCount>
+			<topWindExposure>0.1</topWindExposure>
+			<visualSizeRange>
+				<min>0.4</min>
+				<max>1.1</max>
+			</visualSizeRange>
+			<wildOrder>2</wildOrder>
+      		<purpose>Food</purpose>
+		</plant>
+	</ThingDef>
+
+
+</Defs>

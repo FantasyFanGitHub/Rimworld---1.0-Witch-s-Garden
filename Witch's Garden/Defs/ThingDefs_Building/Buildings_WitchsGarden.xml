@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+<ThingDef Name="WGBuildingBase" Abstract="True">
+    <category>Building</category>
+    <thingClass>Building</thingClass>
+    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+    <selectable>true</selectable>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>Filth_RubbleBuilding</filthLeaving>
+		<statBases>
+			<SellPriceFactor>0.70</SellPriceFactor>
+		</statBases>
+  </ThingDef>
+
+<ThingDef ParentName="WGBuildingBase">
+        <defName>WGComposter</defName>
+        <label>Composter Box</label>
+    <description>For composter you need composter starter made at the butcher table.</description>
+    <graphicData>
+      <texPath>Things/Building/WGComposter</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1,1)</drawSize>
+			<damageData>
+				<rect>(0.05,0.1,0.9,0.9)</rect>
+			</damageData>
+    </graphicData>
+    		<minifiedDef>MinifiedThing</minifiedDef>
+    		<thingCategories>
+      		<li>BuildingsProduction</li>
+    		</thingCategories>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<canOverlapZones>false</canOverlapZones>
+		<fillPercent>0.45</fillPercent>
+		<pathCost>60</pathCost>
+		<rotatable>true</rotatable>
+     		<size>(1,1)</size>
+	<stuffCategories>
+     		<li>Metallic</li>
+     		<li>Woody</li>
+     		<li>Stony</li>
+   	</stuffCategories>
+    <costStuffCount>50</costStuffCount>
+		<useHitPoints>true</useHitPoints>
+		<tickerType>Rare</tickerType>
+
+    <statBases>
+      	<Cleanliness>-15</Cleanliness>
+		<WorkToBuild>600</WorkToBuild>
+		<Mass>10</Mass>
+		<MaxHitPoints>100</MaxHitPoints>
+		<Flammability>1.0</Flammability>
+    </statBases>
+    <designationCategory>Production</designationCategory>
+  <comps>
+     	<li Class="CompProperties_Forbiddable"/>
+      <li Class="Kubouch.CompProperties_UniversalFermenter">
+            <products>
+                <li>
+                    <thingDef>WGCompost</thingDef>
+                    <ingredientFilter>
+                        <thingDefs>
+                            <li>WGCompostStarter</li>
+                        </thingDefs>
+                    </ingredientFilter>
+                    <maxCapacity>75</maxCapacity>
+<baseFermentationDuration>300000</baseFermentationDuration>
+                    <efficiency>1</efficiency>
+                </li>
+            </products>
+		</li>
+       </comps>
+	   <researchPrerequisites>
+      <li>WGFloorRes</li>
+    </researchPrerequisites>
+    </ThingDef>
+	
+	
+
+</Defs>

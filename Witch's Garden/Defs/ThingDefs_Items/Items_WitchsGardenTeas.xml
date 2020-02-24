@@ -1,0 +1,809 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+  <ThingDef ParentName="DrugBase">
+    <defName>WGChamomileTea</defName>
+    <label>Chamomile tea</label>
+    <description>A fragrant tea infused with leaves of the Chamomile plant. Decreses the rest need of a pawn.</description>
+    <graphicData>
+      <texPath>Things/Item/ChamomileTea</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.88</drawSize>
+    </graphicData>
+    <tradeability>Sellable</tradeability>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <tickerType>Rare</tickerType>
+    <statBases>
+      <MarketValue>10</MarketValue>
+      <Mass>0.3</Mass>
+	  <DeteriorationRate>6</DeteriorationRate>
+      <Nutrition>0.05</Nutrition>
+    </statBases>
+    <techLevel>Medieval</techLevel>
+    <ingestible>
+	  <baseIngestTicks>240</baseIngestTicks>
+	  <chairSearchRadius>8</chairSearchRadius>
+      <preferability>NeverForNutrition</preferability>
+      <tasteThought></tasteThought>
+      <foodType>Fluid, Processed</foodType>
+      <joyKind>Chemical</joyKind>
+      <joy>0.05</joy>
+      <nurseable>true</nurseable>
+      <drugCategory>Social</drugCategory>
+	  <ingestSound>Ingest_Drink</ingestSound>
+      <ingestHoldOffsetStanding>
+        <northDefault>
+          <offset>(0.18,0,0)</offset>
+        </northDefault>
+      </ingestHoldOffsetStanding>
+      <ingestHoldUsesTable>false</ingestHoldUsesTable>
+      <ingestCommandString>Drink {0}</ingestCommandString>
+      <ingestReportString>Drinking {0}.</ingestReportString>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>ChamomileTeaHigh</hediffDef>
+          <severity>0.50</severity>
+        </li>
+		<li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>HerbTeaTolerance</hediffDef>
+          <severity>0.032</severity>
+          <divideByBodySize>true</divideByBodySize>
+        </li>
+		<li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>HerbTeaTolerance</hediffDef>
+          <severity>0.032</severity>
+          <divideByBodySize>true</divideByBodySize>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+	<recipeMaker>
+      <recipeUsers>
+        <li>Campfire</li>
+        <li>ElectricStove</li>
+        <li>FueledStove</li>
+      </recipeUsers>
+      <workSpeedStat>DrugCookingSpeed</workSpeedStat>
+      <workSkill>Cooking</workSkill>
+      <skillRequirements>
+        <Cooking>2</Cooking>
+      </skillRequirements>
+    </recipeMaker>
+    <costList>
+      <RawChamomile>4</RawChamomile>
+    </costList>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<chemical>HerbTea</chemical>
+				<addictiveness>0.001</addictiveness>
+				<minToleranceToAddict>0.5</minToleranceToAddict>
+				<existingAddictionSeverityOffset>0.1</existingAddictionSeverityOffset>
+				<needLevelOffset>1</needLevelOffset>
+				<listOrder>110</listOrder>
+			</li>
+		</comps>
+  </ThingDef>
+
+  <ThingDef ParentName="DrugBase">
+    <defName>WGMugwortTea</defName>
+    <label>Mugwort tea</label>
+    <description>A fragrant tea infused with leaves of the Mugwort plant. Decreses the pain of a pawn.</description>
+    <graphicData>
+      <texPath>Things/Item/MugwortTea</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.88</drawSize>
+    </graphicData>
+    <tradeability>Sellable</tradeability>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <tickerType>Rare</tickerType>
+    <statBases>
+      <MarketValue>10</MarketValue>
+      <Mass>0.3</Mass>
+	  <DeteriorationRate>6</DeteriorationRate>
+      <Nutrition>0.05</Nutrition>
+    </statBases>
+    <techLevel>Medieval</techLevel>
+    <ingestible>
+	  <baseIngestTicks>240</baseIngestTicks>
+	  <chairSearchRadius>8</chairSearchRadius>
+      <preferability>NeverForNutrition</preferability>
+      <tasteThought></tasteThought>
+      <foodType>Fluid, Processed</foodType>
+      <joyKind>Chemical</joyKind>
+      <joy>0.05</joy>
+      <nurseable>true</nurseable>
+      <drugCategory>Social</drugCategory>
+	  <ingestSound>Ingest_Drink</ingestSound>
+      <ingestHoldOffsetStanding>
+        <northDefault>
+          <offset>(0.18,0,0)</offset>
+        </northDefault>
+      </ingestHoldOffsetStanding>
+      <ingestHoldUsesTable>false</ingestHoldUsesTable>
+      <ingestCommandString>Drink {0}</ingestCommandString>
+      <ingestReportString>Drinking {0}.</ingestReportString>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>ChamomileTeaHigh</hediffDef>
+          <severity>0.50</severity>
+        </li>
+		<li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>HerbTeaTolerance</hediffDef>
+          <severity>0.032</severity>
+          <divideByBodySize>true</divideByBodySize>
+        </li>
+		<li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>HerbTeaTolerance</hediffDef>
+          <severity>0.032</severity>
+          <divideByBodySize>true</divideByBodySize>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+	<recipeMaker>
+      <recipeUsers>
+        <li>Campfire</li>
+        <li>ElectricStove</li>
+        <li>FueledStove</li>
+      </recipeUsers>
+      <workSpeedStat>DrugCookingSpeed</workSpeedStat>
+      <workSkill>Cooking</workSkill>
+      <skillRequirements>
+        <Cooking>2</Cooking>
+      </skillRequirements>
+    </recipeMaker>
+    <costList>
+      <RawMugwortRoot>4</RawMugwortRoot>
+    </costList>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<chemical>HerbTea</chemical>
+				<addictiveness>0.001</addictiveness>
+				<minToleranceToAddict>0.5</minToleranceToAddict>
+				<existingAddictionSeverityOffset>0.1</existingAddictionSeverityOffset>
+				<needLevelOffset>1</needLevelOffset>
+				<listOrder>110</listOrder>
+			</li>
+		</comps>
+  </ThingDef>
+  
+  <ThingDef ParentName="DrugBase">
+    <defName>WGNettleTea</defName>
+    <label>Nettle tea</label>
+    <description>A fragrant tea infused with leaves of the Nettle plant. Decreses the pain and increses the metabolism of a pawn.</description>
+    <graphicData>
+      <texPath>Things/Item/NettleTea</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.88</drawSize>
+    </graphicData>
+    <tradeability>Sellable</tradeability>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <tickerType>Rare</tickerType>
+    <statBases>
+      <MarketValue>10</MarketValue>
+      <Mass>0.3</Mass>
+	  <DeteriorationRate>6</DeteriorationRate>
+      <Nutrition>0.05</Nutrition>
+    </statBases>
+    <techLevel>Medieval</techLevel>
+    <ingestible>
+	  <baseIngestTicks>240</baseIngestTicks>
+	  <chairSearchRadius>8</chairSearchRadius>
+      <preferability>NeverForNutrition</preferability>
+      <tasteThought></tasteThought>
+      <foodType>Fluid, Processed</foodType>
+      <joyKind>Chemical</joyKind>
+      <joy>0.05</joy>
+      <nurseable>true</nurseable>
+      <drugCategory>Social</drugCategory>
+	  <ingestSound>Ingest_Drink</ingestSound>
+      <ingestHoldOffsetStanding>
+        <northDefault>
+          <offset>(0.18,0,0)</offset>
+        </northDefault>
+      </ingestHoldOffsetStanding>
+      <ingestHoldUsesTable>false</ingestHoldUsesTable>
+      <ingestCommandString>Drink {0}</ingestCommandString>
+      <ingestReportString>Drinking {0}.</ingestReportString>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>NettleTeaHigh</hediffDef>
+          <severity>0.50</severity>
+        </li>
+		<li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>HerbTeaTolerance</hediffDef>
+          <severity>0.032</severity>
+          <divideByBodySize>true</divideByBodySize>
+        </li>
+		<li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>HerbTeaTolerance</hediffDef>
+          <severity>0.032</severity>
+          <divideByBodySize>true</divideByBodySize>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+	<recipeMaker>
+      <recipeUsers>
+        <li>Campfire</li>
+        <li>ElectricStove</li>
+        <li>FueledStove</li>
+      </recipeUsers>
+      <workSpeedStat>DrugCookingSpeed</workSpeedStat>
+      <workSkill>Cooking</workSkill>
+      <skillRequirements>
+        <Cooking>2</Cooking>
+      </skillRequirements>
+    </recipeMaker>
+    <costList>
+      <RawNettle>4</RawNettle>
+    </costList>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<chemical>HerbTea</chemical>
+				<addictiveness>0.001</addictiveness>
+				<minToleranceToAddict>0.5</minToleranceToAddict>
+				<existingAddictionSeverityOffset>0.1</existingAddictionSeverityOffset>
+				<needLevelOffset>1</needLevelOffset>
+				<listOrder>110</listOrder>
+			</li>
+		</comps>
+  </ThingDef>
+  
+  <ThingDef ParentName="DrugBase">
+    <defName>WGThymeTea</defName>
+    <label>Thyme tea</label>
+    <description>A fragrant tea infused with leaves of the Thyme plant. Increses breathing of a pawn.</description>
+    <graphicData>
+      <texPath>Things/Item/ThymeTea</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.88</drawSize>
+    </graphicData>
+    <tradeability>Sellable</tradeability>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <tickerType>Rare</tickerType>
+    <statBases>
+      <MarketValue>10</MarketValue>
+      <Mass>0.3</Mass>
+	  <DeteriorationRate>6</DeteriorationRate>
+      <Nutrition>0.05</Nutrition>
+    </statBases>
+    <techLevel>Medieval</techLevel>
+    <ingestible>
+	  <baseIngestTicks>240</baseIngestTicks>
+	  <chairSearchRadius>8</chairSearchRadius>
+      <preferability>NeverForNutrition</preferability>
+      <tasteThought>ThymeTeaHigh</tasteThought>
+      <foodType>Fluid, Processed</foodType>
+      <joyKind>Chemical</joyKind>
+      <joy>0.05</joy>
+      <nurseable>true</nurseable>
+      <drugCategory>Social</drugCategory>
+	  <ingestSound>Ingest_Drink</ingestSound>
+      <ingestHoldOffsetStanding>
+        <northDefault>
+          <offset>(0.18,0,0)</offset>
+        </northDefault>
+      </ingestHoldOffsetStanding>
+      <ingestHoldUsesTable>false</ingestHoldUsesTable>
+      <ingestCommandString>Drink {0}</ingestCommandString>
+      <ingestReportString>Drinking {0}.</ingestReportString>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>ThymeTeaHigh</hediffDef>
+          <severity>0.50</severity>
+        </li>
+		<li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>HerbTeaTolerance</hediffDef>
+          <severity>0.032</severity>
+          <divideByBodySize>true</divideByBodySize>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+	<recipeMaker>
+      <recipeUsers>
+        <li>Campfire</li>
+        <li>ElectricStove</li>
+        <li>FueledStove</li>
+      </recipeUsers>
+      <workSpeedStat>DrugCookingSpeed</workSpeedStat>
+      <workSkill>Cooking</workSkill>
+      <skillRequirements>
+        <Cooking>2</Cooking>
+      </skillRequirements>
+    </recipeMaker>
+    <costList>
+      <RawThyme>4</RawThyme>
+    </costList>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<chemical>HerbTea</chemical>
+				<addictiveness>0.001</addictiveness>
+				<minToleranceToAddict>0.5</minToleranceToAddict>
+				<existingAddictionSeverityOffset>0.1</existingAddictionSeverityOffset>
+				<needLevelOffset>1</needLevelOffset>
+				<listOrder>110</listOrder>
+			</li>
+		</comps>
+  </ThingDef>
+  
+  <ThingDef ParentName="DrugBase">
+    <defName>WGParsleyTea</defName>
+    <label>Parsley tea</label>
+    <description>A fragrant tea infused with leaves of the Parsley plant. Increses the blood filtration and metabolism of a pawn.</description>
+    <graphicData>
+      <texPath>Things/Item/ParsleyTea</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.88</drawSize>
+    </graphicData>
+    <tradeability>Sellable</tradeability>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <tickerType>Rare</tickerType>
+    <statBases>
+      <MarketValue>10</MarketValue>
+      <Mass>0.3</Mass>
+	  <DeteriorationRate>6</DeteriorationRate>
+      <Nutrition>0.05</Nutrition>
+    </statBases>
+    <techLevel>Medieval</techLevel>
+    <ingestible>
+	  <baseIngestTicks>240</baseIngestTicks>
+	  <chairSearchRadius>8</chairSearchRadius>
+      <preferability>NeverForNutrition</preferability>
+      <tasteThought></tasteThought>
+      <foodType>Fluid, Processed</foodType>
+      <joyKind>Chemical</joyKind>
+      <joy>0.05</joy>
+      <nurseable>true</nurseable>
+      <drugCategory>Social</drugCategory>
+	  <ingestSound>Ingest_Drink</ingestSound>
+      <ingestHoldOffsetStanding>
+        <northDefault>
+          <offset>(0.18,0,0)</offset>
+        </northDefault>
+      </ingestHoldOffsetStanding>
+      <ingestHoldUsesTable>false</ingestHoldUsesTable>
+      <ingestCommandString>Drink {0}</ingestCommandString>
+      <ingestReportString>Drinking {0}.</ingestReportString>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>ParsleyTeaHigh</hediffDef>
+          <severity>0.50</severity>
+        </li>
+		<li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>HerbTeaTolerance</hediffDef>
+          <severity>0.032</severity>
+          <divideByBodySize>true</divideByBodySize>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+	<recipeMaker>
+      <recipeUsers>
+        <li>Campfire</li>
+        <li>ElectricStove</li>
+        <li>FueledStove</li>
+      </recipeUsers>
+      <workSpeedStat>DrugCookingSpeed</workSpeedStat>
+      <workSkill>Cooking</workSkill>
+      <skillRequirements>
+        <Cooking>2</Cooking>
+      </skillRequirements>
+    </recipeMaker>
+    <costList>
+      <RawParsley>4</RawParsley>
+    </costList>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<chemical>HerbTea</chemical>
+				<addictiveness>0.001</addictiveness>
+				<minToleranceToAddict>0.5</minToleranceToAddict>
+				<existingAddictionSeverityOffset>0.1</existingAddictionSeverityOffset>
+				<needLevelOffset>1</needLevelOffset>
+				<listOrder>110</listOrder>
+			</li>
+		</comps>
+  </ThingDef>
+  
+  <ThingDef ParentName="DrugBase">
+    <defName>WGPeppermintTea</defName>
+    <label>Peppermint tea</label>
+    <description>A fragrant tea infused with leaves of the Peppermint plant. Decreses the rest need and pain and increses the metabolsim of a pawn.</description>
+    <graphicData>
+      <texPath>Things/Item/PeppermintTea</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.88</drawSize>
+    </graphicData>
+    <tradeability>Sellable</tradeability>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <tickerType>Rare</tickerType>
+    <statBases>
+      <MarketValue>10</MarketValue>
+      <Mass>0.3</Mass>
+	  <DeteriorationRate>6</DeteriorationRate>
+      <Nutrition>0.05</Nutrition>
+    </statBases>
+    <techLevel>Medieval</techLevel>
+    <ingestible>
+	  <baseIngestTicks>240</baseIngestTicks>
+	  <chairSearchRadius>8</chairSearchRadius>
+      <preferability>NeverForNutrition</preferability>
+      <tasteThought></tasteThought>
+      <foodType>Fluid, Processed</foodType>
+      <joyKind>Chemical</joyKind>
+      <joy>0.05</joy>
+      <nurseable>true</nurseable>
+      <drugCategory>Social</drugCategory>
+	  <ingestSound>Ingest_Drink</ingestSound>
+      <ingestHoldOffsetStanding>
+        <northDefault>
+          <offset>(0.18,0,0)</offset>
+        </northDefault>
+      </ingestHoldOffsetStanding>
+      <ingestHoldUsesTable>false</ingestHoldUsesTable>
+      <ingestCommandString>Drink {0}</ingestCommandString>
+      <ingestReportString>Drinking {0}.</ingestReportString>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>PeppermintTeaHigh</hediffDef>
+          <severity>0.50</severity>
+        </li>
+		<li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>HerbTeaTolerance</hediffDef>
+          <severity>0.032</severity>
+          <divideByBodySize>true</divideByBodySize>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+	<recipeMaker>
+      <recipeUsers>
+        <li>Campfire</li>
+        <li>ElectricStove</li>
+        <li>FueledStove</li>
+      </recipeUsers>
+      <workSpeedStat>DrugCookingSpeed</workSpeedStat>
+      <workSkill>Cooking</workSkill>
+      <skillRequirements>
+        <Cooking>2</Cooking>
+      </skillRequirements>
+    </recipeMaker>
+    <costList>
+      <RawPeppermint>4</RawPeppermint>
+    </costList>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<chemical>HerbTea</chemical>
+				<addictiveness>0.001</addictiveness>
+				<minToleranceToAddict>0.5</minToleranceToAddict>
+				<existingAddictionSeverityOffset>0.1</existingAddictionSeverityOffset>
+				<needLevelOffset>1</needLevelOffset>
+				<listOrder>110</listOrder>
+			</li>
+		</comps>
+  </ThingDef>
+  
+  <ThingDef ParentName="DrugBase">
+    <defName>WGSageTea</defName>
+    <label>Sage tea</label>
+    <description>A fragrant tea infused with leaves of the Sage plant. Decreses the pain of a pawn.</description>
+    <graphicData>
+      <texPath>Things/Item/SageTea</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.88</drawSize>
+    </graphicData>
+    <tradeability>Sellable</tradeability>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <tickerType>Rare</tickerType>
+    <statBases>
+      <MarketValue>10</MarketValue>
+      <Mass>0.3</Mass>
+	  <DeteriorationRate>6</DeteriorationRate>
+      <Nutrition>0.05</Nutrition>
+    </statBases>
+    <techLevel>Medieval</techLevel>
+    <ingestible>
+	  <baseIngestTicks>240</baseIngestTicks>
+	  <chairSearchRadius>8</chairSearchRadius>
+      <preferability>NeverForNutrition</preferability>
+      <tasteThought></tasteThought>
+      <foodType>Fluid, Processed</foodType>
+      <joyKind>Chemical</joyKind>
+      <joy>0.05</joy>
+      <nurseable>true</nurseable>
+      <drugCategory>Social</drugCategory>
+	  <ingestSound>Ingest_Drink</ingestSound>
+      <ingestHoldOffsetStanding>
+        <northDefault>
+          <offset>(0.18,0,0)</offset>
+        </northDefault>
+      </ingestHoldOffsetStanding>
+      <ingestHoldUsesTable>false</ingestHoldUsesTable>
+      <ingestCommandString>Drink {0}</ingestCommandString>
+      <ingestReportString>Drinking {0}.</ingestReportString>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>SageTeaHigh</hediffDef>
+          <severity>0.50</severity>
+        </li>
+		<li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>HerbTeaTolerance</hediffDef>
+          <severity>0.032</severity>
+          <divideByBodySize>true</divideByBodySize>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+	<recipeMaker>
+      <recipeUsers>
+        <li>Campfire</li>
+        <li>ElectricStove</li>
+        <li>FueledStove</li>
+      </recipeUsers>
+      <workSpeedStat>DrugCookingSpeed</workSpeedStat>
+      <workSkill>Cooking</workSkill>
+      <skillRequirements>
+        <Cooking>2</Cooking>
+      </skillRequirements>
+    </recipeMaker>
+    <costList>
+      <RawSage>4</RawSage>
+    </costList>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<chemical>HerbTea</chemical>
+				<addictiveness>0.001</addictiveness>
+				<minToleranceToAddict>0.5</minToleranceToAddict>
+				<existingAddictionSeverityOffset>0.1</existingAddictionSeverityOffset>
+				<needLevelOffset>1</needLevelOffset>
+				<listOrder>110</listOrder>
+			</li>
+		</comps>
+  </ThingDef>
+  
+  <ChemicalDef>
+    <defName>HerbTea</defName>
+    <label>Herb Tea</label>
+    <addictionHediff>HerbTeaAddiction</addictionHediff>
+    <toleranceHediff>HerbTeaTolerance</toleranceHediff>
+    <onGeneratedAddictedToleranceChance>0.8</onGeneratedAddictedToleranceChance>
+  </ChemicalDef>
+  
+  <NeedDef ParentName="DrugAddictionNeedBase">
+    <defName>Chemical_HerbTea</defName>
+    <needClass>Need_Chemical</needClass>
+    <label>Herb Tea</label>
+    <description>Because of an Herb Tea addiction, this person needs to regularly consume Herb Tea to avoid withdrawal symptoms.</description>
+    <listPriority>20</listPriority>
+  </NeedDef>
+
+  <HediffDef ParentName="DrugToleranceBase">
+    <defName>HerbTeaTolerance</defName>
+    <label>Herb Tea tolerance</label>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.020</severityPerDay>
+      </li>
+      <li Class="HediffCompProperties_DrugEffectFactor">
+        <chemical>HerbTea</chemical>
+      </li>
+    </comps>
+  </HediffDef>
+  
+  <HediffDef ParentName="AddictionBase">
+    <defName>HerbTeaAddiction</defName>
+    <hediffClass>Hediff_Addiction</hediffClass>
+    <label>Herb Tea addiction</label>
+    <causesNeed>Chemical_HerbTea</causesNeed>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.1</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+      </li>
+      <li>
+        <label>withdrawal</label>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThoughtDef>
+    <defName>HerbTeaWithdrawal</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>HerbTeaAddiction</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <visible>false</visible>
+      </li>
+      <li>
+        <label>Herb Tea withdrawal</label>
+        <description>I feel heavy and cold all the time. I never thought I'd want a piece of herb so much.</description>
+        <baseMoodEffect>-10</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+  <HediffDef>
+    <defName>ChamomileTeaHigh</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>high on Chamomile tea</label>
+    <labelNoun>a Chamomile tea high</labelNoun>
+    <stages>
+    	<li>
+			<restFallFactor>0.5</restFallFactor>
+		</li>
+    </stages>
+	<defaultLabelColor>(0,1,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-3.0</severityPerDay>
+      </li>
+    </comps>
+  </HediffDef>
+  
+  <HediffDef>
+    <defName>MugwortTeaHigh</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>high on Mugwort tea</label>
+    <labelNoun>a Mugwort tea high</labelNoun>
+    <stages>
+    	<li>
+			<painFactor>0.45</painFactor>
+		</li>
+    </stages>
+	<defaultLabelColor>(0,1,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-3.0</severityPerDay>
+      </li>
+    </comps>
+  </HediffDef>
+  
+  <HediffDef>
+    <defName>NettleTeaHigh</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>high on Nettle tea</label>
+    <labelNoun>a Nettle tea high</labelNoun>
+    <stages>
+		<li>
+			<painFactor>0.25</painFactor>
+		<capMods>
+			<li>
+              <capacity>Metabolism</capacity>
+              <offset>0.20</offset>
+            </li>
+        </capMods></li>
+    </stages>
+	<defaultLabelColor>(0,1,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-3.0</severityPerDay>
+      </li>
+    </comps>
+  </HediffDef>
+  
+  <HediffDef>
+    <defName>ThymeTeaHigh</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>high on Thyme tea</label>
+    <labelNoun>a Thyme tea high</labelNoun>
+    <stages>
+    	<li>
+		<capMods>
+            <li>
+              <capacity>Breathing</capacity>
+              <offset>0.40</offset>
+            </li>
+        </capMods>
+		</li>
+    </stages>
+	<defaultLabelColor>(0,1,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-3.0</severityPerDay>
+      </li>
+    </comps>
+  </HediffDef>
+  
+  <ThoughtDef>
+    <defName>ThymeTeaHigh</defName>
+    <hediff>ThymeTeaHigh</hediff>
+    <stages>
+      <li>
+        <label>Thyme tea</label>
+		<description>Drinking that tea made me feel great. I love having this energy!</description>
+        <baseMoodEffect>9</baseMoodEffect>
+      </li>
+    </stages>
+	<workerClass>ThoughtWorker_Hediff</workerClass>
+    <validWhileDespawned>true</validWhileDespawned>
+  </ThoughtDef>
+  
+  <HediffDef>
+    <defName>ParsleyTeaHigh</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>high on Parsley tea</label>
+    <labelNoun>a Parsley tea high</labelNoun>
+    <stages>
+		<li><capMods>
+            <li>
+              <capacity>BloodFiltration</capacity>
+              <offset>0.20</offset>
+            </li>
+			<li>
+              <capacity>Metabolism</capacity>
+              <offset>0.10</offset>
+            </li>
+        </capMods></li>
+    </stages>
+	<defaultLabelColor>(0,1,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-3.0</severityPerDay>
+      </li>
+    </comps>
+  </HediffDef>
+  
+  <HediffDef>
+    <defName>PeppermintTeaHigh</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>high on Peppermint tea</label>
+    <labelNoun>a Peppermint tea high</labelNoun>
+    <stages>
+    	<li>
+			<restFallFactor>0.8</restFallFactor>
+			<painFactor>0.30</painFactor>
+		<capMods>
+            <li>
+              <capacity>Metabolism</capacity>
+              <offset>0.15</offset>
+            </li>
+        </capMods>
+		</li>
+    </stages>
+	<defaultLabelColor>(0,1,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-3.0</severityPerDay>
+      </li>
+    </comps>
+  </HediffDef>
+  
+  <HediffDef>
+    <defName>SageTeaHigh</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>high on Sage tea</label>
+    <labelNoun>a Sage tea high</labelNoun>
+    <stages>
+    	<li>
+			<painFactor>0.45</painFactor>
+    	</li>
+    </stages>
+	<defaultLabelColor>(0,1,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-3.0</severityPerDay>
+      </li>
+    </comps>
+  </HediffDef>
+
+</Defs>

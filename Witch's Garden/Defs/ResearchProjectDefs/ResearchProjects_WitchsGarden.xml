@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+<ResearchProjectDef>
+    <defName>WGHerbsRes</defName>
+    <label>Simple Herbs</label>
+    <description>Cook fine meal with herbs.</description>
+    <baseCost>50</baseCost>
+    <techLevel>Medieval</techLevel>
+	<tab>WitchsGardenTab</tab>
+    <researchViewX>0</researchViewX>
+    <researchViewY>0</researchViewY>
+</ResearchProjectDef>
+
+<ResearchProjectDef>
+    <defName>WGHealingRes</defName>
+    <label>Healing Herbs</label>
+    <description>Sow plants for healing uses.</description>
+    <baseCost>450</baseCost>
+    <techLevel>Medieval</techLevel>
+	<prerequisites>
+	  <li>WGHerbsRes</li>
+    </prerequisites>
+	<tab>WitchsGardenTab</tab>
+    <researchViewX>1</researchViewX>
+    <researchViewY>0</researchViewY>
+</ResearchProjectDef>
+
+<ResearchProjectDef>
+    <defName>WGFoodRes</defName>
+    <label>Food Herbs</label>
+    <description>Sow plants for food uses.</description>
+    <baseCost>350</baseCost>
+    <techLevel>Medieval</techLevel>
+	<prerequisites>
+	  <li>WGHerbsRes</li>
+    </prerequisites>
+	<tab>WitchsGardenTab</tab>
+    <researchViewX>1</researchViewX>
+    <researchViewY>0.75</researchViewY>
+</ResearchProjectDef>
+
+<ResearchProjectDef>
+    <defName>WGDecoRes</defName>
+    <label>Decorative Herbs</label>
+    <description>Sow plants for decorative uses.</description>
+    <baseCost>120</baseCost>
+    <techLevel>Medieval</techLevel>
+	<prerequisites>
+	  <li>WGHerbsRes</li>
+    </prerequisites>
+	<tab>WitchsGardenTab</tab>
+    <researchViewX>1</researchViewX>
+    <researchViewY>1.5</researchViewY>
+</ResearchProjectDef>
+
+<ResearchProjectDef>
+    <defName>WGFloorRes</defName>
+    <label>Garden Flooring</label>
+    <description>Build mulch and compost floor with better fertility than the normal soil. Craft bark at the crafting spot. Craft compost starter at the butcher table.</description>
+    <baseCost>550</baseCost>
+    <techLevel>Medieval</techLevel>
+	<prerequisites>
+	  <li>WGHerbsRes</li>
+    </prerequisites>
+	<tab>WitchsGardenTab</tab>
+    <researchViewX>1</researchViewX>
+    <researchViewY>2.25</researchViewY>
+</ResearchProjectDef>
+
+</Defs>

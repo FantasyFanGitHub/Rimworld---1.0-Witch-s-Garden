@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+<ThingDef Abstract="True" Name="HerbFoodRawBase" ParentName="OrganicProductBase">
+    <ingestible>
+      <preferability>RawBad</preferability>
+			<tasteThought>AteRawFood</tasteThought>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>RawVegetable_Eat</ingestSound>
+    </ingestible>
+    <statBases>
+      <Nutrition>0.05</Nutrition>
+      <FoodPoisonChanceFixedHuman>0.02</FoodPoisonChanceFixedHuman>
+    </statBases>
+    <socialPropernessMatters>true</socialPropernessMatters>
+  </ThingDef>
+
+<ThingDef ParentName="HerbFoodRawBase">
+    <defName>RawLavender</defName>
+    <label>Lavender</label>
+	<description>Lavender is a genus of 47 known species of flowering plants in the mint family. It is native to the Old World and is found from Cape Verde and the Canary Islands, Europe across to northern and eastern Africa, the Mediterranean, southwest Asia to southeast India.</description>
+    <graphicData>
+      <texPath>Things/Item/Lavender</texPath>
+	  <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+	<thingCategories>
+      <li>HerbFoodRawCat</li>
+    </thingCategories>
+	<stackLimit>150</stackLimit>
+    <smallVolume>true</smallVolume>
+	<statBases>
+      <MarketValue>1.1</MarketValue>
+    </statBases>
+    <ingestible>
+      <foodType>VegetableOrFruit</foodType>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>30</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="HerbFoodRawBase">
+    <defName>RawYarrow</defName>
+    <label>Yarrow</label>
+	<description>Yarrow is a flowering plant in the family Asteraceae. It is native to temperate regions of the Northern Hemisphere in Asia, Europe, and North America.</description>
+    <graphicData>
+      <texPath>Things/Item/Yarrow</texPath>
+	  <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+	<thingCategories>
+      <li>HerbPlantMatterCat</li>
+    </thingCategories>
+	<stackLimit>150</stackLimit>
+    <smallVolume>true</smallVolume>
+	<statBases>
+      <MarketValue>1.1</MarketValue>
+    </statBases>
+    <ingestible>
+      <foodType>VegetableOrFruit</foodType>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>30</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="HerbFoodRawBase">
+    <defName>RawPeppermint</defName>
+    <label>Peppermint</label>
+	<description>Peppermint is a hybrid mint, a cross between watermint and spearmint. Indigenous to Europe and the Middle East, the plant is now widely spread and cultivated in many regions of the world.</description>
+    <graphicData>
+      <texPath>Things/Item/Peppermint</texPath>
+	  <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+	<thingCategories>
+      <li>HerbFoodRawCat</li>
+    </thingCategories>
+	<stackLimit>150</stackLimit>
+    <smallVolume>true</smallVolume>
+	<statBases>
+      <MarketValue>1.1</MarketValue>
+    </statBases>
+    <ingestible>
+      <foodType>VegetableOrFruit</foodType>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>30</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="HerbFoodRawBase">
+    <defName>RawBasil</defName>
+    <label>Basil</label>
+	<description>Basil is a culinary herb of the mint family. Basil is native to tropical regions from central Africa to Southeast Asia.</description>
+    <graphicData>
+      <texPath>Things/Item/Basil</texPath>
+	  <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+	<thingCategories>
+      <li>HerbFoodRawCat</li>
+    </thingCategories>
+	<stackLimit>150</stackLimit>
+    <smallVolume>true</smallVolume>
+	<statBases>
+      <MarketValue>1.1</MarketValue>
+    </statBases>
+    <ingestible>
+      <foodType>VegetableOrFruit</foodType>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>30</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+  </ThingDef>
+
+    <ThingDef ParentName="HerbFoodRawBase">
+    <defName>RawRosmary</defName>
+    <label>Rosmary</label>
+	<description>Rosemary is a woody, perennial herb with fragrant, evergreen, needle-like leaves and white, pink, purple, or blue flowers, native to the Mediterranean region.</description>
+    <graphicData>
+      <texPath>Things/Item/Rosmary</texPath>
+	  <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+	<thingCategories>
+      <li>HerbFoodRawCat</li>
+    </thingCategories>
+	<stackLimit>150</stackLimit>
+    <smallVolume>true</smallVolume>
+	<statBases>
+      <MarketValue>1.1</MarketValue>
+    </statBases>
+    <ingestible>
+      <foodType>VegetableOrFruit</foodType>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>30</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <ThingDef ParentName="HerbFoodRawBase">
+    <defName>RawMint</defName>
+    <label>Mint</label>
+	<description>Mint is a genus of plants in the mint family. The genus has a subcosmopolitan distribution across Europe, Africa, Asia, Australia, and North America.</description>
+    <graphicData>
+      <texPath>Things/Item/Mint</texPath>
+	  <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+	<thingCategories>
+      <li>HerbFoodRawCat</li>
+    </thingCategories>
+	<stackLimit>150</stackLimit>
+    <smallVolume>true</smallVolume>
+	<statBases>
+      <MarketValue>1.1</MarketValue>
+    </statBases>
+    <ingestible>
+      <foodType>VegetableOrFruit</foodType>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>30</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <ThingDef ParentName="HerbFoodRawBase">
+    <defName>RawChamomile</defName>
+    <label>Chamomile</label>
+	<description>Chamomile is the common name for several daisy-like plants of the family Asteraceae.</description>
+    <graphicData>
+      <texPath>Things/Item/Chamomile</texPath>
+	  <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+	<thingCategories>
+      <li>HerbPlantMatterCat</li>
+    </thingCategories>
+	<stackLimit>150</stackLimit>
+    <smallVolume>true</smallVolume>
+	<statBases>
+      <MarketValue>1.1</MarketValue>
+    </statBases>
+    <ingestible>
+      <foodType>VegetableOrFruit</foodType>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>30</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <ThingDef ParentName="HerbFoodRawBase">
+    <defName>RawSage</defName>
+    <label>Sage</label>
+	<description>Sage is a perennial, evergreen subshrub, with woody stems, grayish leaves, and blue to purplish flowers. It is a member of the mint family and native to the Mediterranean region.</description>
+    <graphicData>
+      <texPath>Things/Item/Sage</texPath>
+	  <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+	<thingCategories>
+      <li>HerbFoodRawCat</li>
+    </thingCategories>
+	<stackLimit>150</stackLimit>
+    <smallVolume>true</smallVolume>
+	<statBases>
+      <MarketValue>1.1</MarketValue>
+    </statBases>
+    <ingestible>
+      <foodType>VegetableOrFruit</foodType>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>30</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  
+  
+  <ThingDef ParentName="HerbFoodRawBase">
+    <defName>RawNettle</defName>
+    <label>Nettle</label>
+	<description>Urtica is a genus of flowering plants in the family Urticaceae. Many species have stinging hairs and may be called nettle.</description>
+    <graphicData>
+      <texPath>Things/Item/Nettle</texPath>
+	  <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+	<thingCategories>
+      <li>HerbPlantMatterCat</li>
+    </thingCategories>
+	<stackLimit>150</stackLimit>
+    <smallVolume>true</smallVolume>
+	<statBases>
+      <MarketValue>1.1</MarketValue>
+    </statBases>
+    <ingestible>
+      <foodType>VegetableOrFruit</foodType>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>30</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <ThingDef ParentName="HerbFoodRawBase">
+    <defName>RawMugwortRoot</defName>
+    <label>Mugwort Root</label>
+	<description>Mugwort is a common name for several species of aromatic plants in the genus Artemisia. In Europe, mugwort most often refers to the species Artemisia vulgaris, or common mugwort.</description>
+    <graphicData>
+      <texPath>Things/Item/MugwortRoot</texPath>
+	  <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+	<thingCategories>
+      <li>HerbPlantMatterCat</li>
+    </thingCategories>
+	<stackLimit>150</stackLimit>
+    <smallVolume>true</smallVolume>
+	<statBases>
+      <MarketValue>1.1</MarketValue>
+    </statBases>
+    <ingestible>
+      <foodType>VegetableOrFruit</foodType>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>30</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <ThingDef ParentName="HerbFoodRawBase">
+    <defName>RawChives</defName>
+    <label>Chives</label>
+	<description>Chives are an edible species of the genus Allium. It is widespread in nature across much of Europe, Asia, and North America.</description>
+    <graphicData>
+      <texPath>Things/Item/Chives</texPath>
+	  <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+	<thingCategories>
+      <li>HerbFoodRawCat</li>
+    </thingCategories>
+	<stackLimit>150</stackLimit>
+    <smallVolume>true</smallVolume>
+	<statBases>
+      <MarketValue>1.1</MarketValue>
+    </statBases>
+    <ingestible>
+      <foodType>VegetableOrFruit</foodType>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>30</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <ThingDef ParentName="HerbFoodRawBase">
+    <defName>RawThyme</defName>
+    <label>Thyme</label>
+	<description>Thyme is any member of the genus Thymus of aromatic perennial evergreen herbs in the mint family.</description>
+    <graphicData>
+      <texPath>Things/Item/Thyme</texPath>
+	  <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+	<thingCategories>
+      <li>HerbFoodRawCat</li>
+    </thingCategories>
+	<stackLimit>150</stackLimit>
+    <smallVolume>true</smallVolume>
+	<statBases>
+      <MarketValue>1.1</MarketValue>
+    </statBases>
+    <ingestible>
+      <foodType>VegetableOrFruit</foodType>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>30</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <ThingDef ParentName="HerbFoodRawBase">
+    <defName>RawParsley</defName>
+    <label>Parsley</label>
+	<description>Parsley is a species of flowering plant in the family Apiaceae that is native to the central Mediterranean region, but has naturalized elsewhere in Europe.</description>
+    <graphicData>
+      <texPath>Things/Item/Parsley</texPath>
+	  <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+	<thingCategories>
+      <li>HerbFoodRawCat</li>
+    </thingCategories>
+	<stackLimit>150</stackLimit>
+    <smallVolume>true</smallVolume>
+	<statBases>
+      <MarketValue>1.1</MarketValue>
+    </statBases>
+    <ingestible>
+      <foodType>VegetableOrFruit</foodType>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>30</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+  </ThingDef>
+
+
+
+
+<ThingDef ParentName="RoughPlantBase">
+    <defName>WGCompostStarter</defName>
+    <label>Compost Starter</label>
+    <description>A pile of old veggtables.</description>
+    <graphicData>
+      <texPath>Things/Item/WGCompostStarter</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <stackLimit>75</stackLimit>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <MarketValue>2.5</MarketValue>
+      <Mass>0.6</Mass>
+      <Flammability>0.6</Flammability>
+			<DeteriorationRate>1.0</DeteriorationRate>
+		</statBases>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+  </ThingDef>
+  
+  <ThingDef ParentName="ResourceBase">
+    <defName>WGCompost</defName>
+    <label>Compost</label>
+    <description>Use compost for better flooring.</description>
+    <graphicData>
+      <texPath>Things/Item/WGCompost</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <stackLimit>75</stackLimit>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <MarketValue>2.7</MarketValue>
+      <Mass>0.6</Mass>
+      <Flammability>0.6</Flammability>
+			<DeteriorationRate>1.0</DeteriorationRate>
+		</statBases>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+  </ThingDef>
+
+<ThingDef ParentName="ResourceBase">
+    <defName>WGBark</defName>
+    <label>Bark</label>
+    <description>Use bark for mulch flooring.</description>
+    <graphicData>
+      <texPath>Things/Item/WGBark</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <stackLimit>75</stackLimit>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <MarketValue>1.4</MarketValue>
+      <Mass>0.2</Mass>
+      <Flammability>1.0</Flammability>
+			<DeteriorationRate>1.0</DeteriorationRate>
+		</statBases>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+  </ThingDef>
+  
+  <ThingDef ParentName="MedicineBase">
+    <defName>WGHerbalMed</defName>
+    <label>adv. herbal medicine</label>
+    <description>Advanced herbal medicine. (like industrial medicine)</description>
+    <graphicData>
+      <texPath>Things/Item/AdvHerbalMedi</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>15</MarketValue>
+      <Mass>0.5</Mass>
+      <Flammability>1.3</Flammability>
+      <MedicalPotency>1.00</MedicalPotency>
+      <MedicalQualityMax>1.00</MedicalQualityMax>
+      <DeteriorationRate>6</DeteriorationRate>
+	  <WorkToMake>650</WorkToMake>
+		</statBases>
+		<costList>
+      <MedicineHerbal>2</MedicineHerbal>
+      <Cloth>3</Cloth>
+    </costList>
+	<recipeMaker>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+      <workSkill>Intellectual</workSkill>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <researchPrerequisite>MedicineProduction</researchPrerequisite>
+      <skillRequirements>
+				<Crafting>4</Crafting>
+        <Intellectual>4</Intellectual>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+
+</Defs>

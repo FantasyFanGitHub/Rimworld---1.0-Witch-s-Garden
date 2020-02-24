@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+<ThingDef ParentName="MedicineBase">
+    <defName>RawHellebores</defName>
+    <label>Hellebores</label>
+	<description>The Eurasian genus Helleborus consists of approximately 20 species of herbaceous or evergreen perennial flowering plants in the family Ranunculaceae, within which it gave its name to the tribe of Helleboreae. Medicine item.</description>
+    <graphicData>
+      <texPath>Things/Item/Hellebores</texPath>
+	  <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+		<techLevel>Neolithic</techLevel>
+		<statBases>
+	  <Nutrition>0.05</Nutrition>
+      <MarketValue>1.1</MarketValue>
+      <Mass>0.03</Mass>
+      <Flammability>1.0</Flammability>
+      <MedicalPotency>0.5</MedicalPotency>
+	  <MedicalQualityMax>0.60</MedicalQualityMax>
+      <DeteriorationRate>6</DeteriorationRate>
+    </statBases>
+    <tickerType>Rare</tickerType>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>30</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+    </comps>
+	<thingCategories>
+      <li>HerbPlantMatterCat</li>
+    </thingCategories>
+	<stackLimit>150</stackLimit>
+    <smallVolume>true</smallVolume>
+	<ingestible>
+      <foodType>VegetableOrFruit</foodType>
+	  <preferability>RawBad</preferability>
+	  <tasteThought>AteRawFood</tasteThought>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>RawVegetable_Eat</ingestSound>
+    </ingestible>
+	<socialPropernessMatters>true</socialPropernessMatters>
+  </ThingDef>
+  
+  <ThingDef ParentName="MedicineBase">
+    <defName>RawComfrey</defName>
+    <label>Comfrey</label>
+	<description>Symphytum is a genus of flowering plants in the borage family, Boraginaceae. There are up to 35 species, known by the common name comfrey. Medicine item.</description>
+    <graphicData>
+      <texPath>Things/Item/Comfrey</texPath>
+	  <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+		<techLevel>Neolithic</techLevel>
+		<statBases>
+	  <Nutrition>0.05</Nutrition>
+      <MarketValue>1.1</MarketValue>
+      <Mass>0.03</Mass>
+      <Flammability>1.0</Flammability>
+      <MedicalPotency>0.6</MedicalPotency>
+	  <MedicalQualityMax>0.50</MedicalQualityMax>
+      <DeteriorationRate>6</DeteriorationRate>
+    </statBases>
+    <tickerType>Rare</tickerType>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>30</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+    </comps>
+	<thingCategories>
+      <li>HerbPlantMatterCat</li>
+    </thingCategories>
+	<stackLimit>150</stackLimit>
+    <smallVolume>true</smallVolume>
+	<ingestible>
+      <foodType>VegetableOrFruit</foodType>
+	  <preferability>RawBad</preferability>
+	  <tasteThought>AteRawFood</tasteThought>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>RawVegetable_Eat</ingestSound>
+    </ingestible>
+	<socialPropernessMatters>true</socialPropernessMatters>
+  </ThingDef>
+  
+  <ThingDef ParentName="MedicineBase">
+    <defName>RawCalendula</defName>
+    <label>Calendula</label>
+	<description>Calendula, is a genus of about 15–20 species of annual and perennial herbaceous plants in the daisy family Asteraceae that are often known as marigolds. They are native to southwestern Asia, western Europe, Macaronesia, and the Mediterranean. Medicine item.</description>
+    <graphicData>
+      <texPath>Things/Item/Calendula</texPath>
+	  <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+		<techLevel>Neolithic</techLevel>
+		<statBases>
+	  <Nutrition>0.05</Nutrition>
+      <MarketValue>1.1</MarketValue>
+      <Mass>0.03</Mass>
+      <Flammability>1.0</Flammability>
+      <MedicalPotency>0.5</MedicalPotency>
+	<MedicalQualityMax>0.50</MedicalQualityMax>
+      <DeteriorationRate>6</DeteriorationRate>
+    </statBases>
+    <tickerType>Rare</tickerType>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>30</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+    </comps>
+	<thingCategories>
+      <li>HerbFoodRawCat</li>
+    </thingCategories>
+	<stackLimit>150</stackLimit>
+    <smallVolume>true</smallVolume>
+	<ingestible>
+      <foodType>VegetableOrFruit</foodType>
+	  <preferability>RawBad</preferability>
+	  <tasteThought>AteRawFood</tasteThought>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>RawVegetable_Eat</ingestSound>
+    </ingestible>
+	<socialPropernessMatters>true</socialPropernessMatters>
+  </ThingDef>
+
+</Defs>

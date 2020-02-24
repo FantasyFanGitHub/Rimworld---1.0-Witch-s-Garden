@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  	<ThingCategoryDef>
+        <defName>HerbFoodRawCat</defName>
+        <label>food herbs</label>
+        <parent>FoodRaw</parent>
+        <iconPath>UI/Icons/ThingCategories/PlantFoodRaw</iconPath>
+      </ThingCategoryDef>
+	  
+	 <ThingCategoryDef>
+        <defName>HerbPlantMatterCat</defName>
+        <label>healing herbs</label>
+        <parent>PlantMatter</parent>
+        <iconPath>UI/Icons/ThingCategories/PlantMatter</iconPath>
+      </ThingCategoryDef>
+
+</Defs>
